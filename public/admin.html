@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 · 하우인터내셔널</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  /* --- admin-only layout (스캐폴드) --- */
+  .admin-top{border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;justify-content:space-between}
+  .admin-top .brand img{height:22px}
+  .admin-top .who{font-family:var(--mono);font-size:.78rem;color:var(--muted);display:flex;gap:14px;align-items:center}
+  .login-wrap{min-height:70vh;display:flex;align-items:center;justify-content:center}
+  .login-card{width:100%;max-width:380px;border:1px solid var(--line);padding:40px 34px}
+  .login-card h1{font-size:1.4rem;font-weight:800;letter-spacing:-.02em}
+  .login-card .sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:22px 0 30px}
+  .tabs button{font-family:var(--kr);font-size:.92rem;font-weight:600;background:none;border:none;padding:12px 16px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+  .tabs button.on{color:var(--ink);border-bottom-color:var(--blue)}
+  .panel{display:none}.panel.on{display:block}
+  .card{border:1px solid var(--line);padding:22px 24px;margin-bottom:14px}
+  .card .meta{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.04em}
+  .card .badge{font-family:var(--mono);font-size:.66rem;color:var(--blue);border:1px solid var(--line-strong);padding:2px 7px;border-radius:2px;margin-right:8px;text-transform:uppercase}
+  .card h4{font-size:1.05rem;font-weight:700;margin:8px 0 4px}
+  .todo{border:1px dashed var(--line-strong);padding:30px;text-align:center;color:var(--muted)}
+  .todo .mono{display:block;font-size:.72rem;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
+  .hint{font-size:.8rem;color:var(--muted);margin-top:8px}
+  .banner{background:var(--blue-wash);border:1px solid var(--line);padding:12px 16px;font-size:.85rem;color:var(--ink-2);margin-bottom:20px}
+</style>
+</head>
+<body data-page="admin">
+
+<div class="wrap admin-top">
+  <a class="brand" href="index.html"><img src="assets/how-logo.png" alt="HOW"></a>
+  <div class="who">
+    <span id="who-email">관리자</span>
+    <button class="btn ghost" id="logout" style="display:none;padding:8px 14px">로그아웃</button>
+  </div>
+</div>
+
+<!-- 로그인 -->
+<section id="view-login" class="wrap login-wrap">
+  <div class="login-card">
+    <div class="sub">Admin</div>
+    <h1>관리자 로그인</h1>
+    <div id="cfg-warn" class="hint" style="margin:14px 0 0"></div>
+    <form id="login-form" style="margin-top:22px">
+      <div class="field"><label>이메일</label><input type="email" name="email" required></div>
+      <div class="field"><label>비밀번호</label><input type="password" name="password" required></div>
+      <button class="btn blue lg" type="submit" style="width:100%;justify-content:center">로그인</button>
+      <p class="hint" id="login-err" style="color:#B00020"></p>
+    </form>
+  </div>
+</section>
+
+<!-- 대시보드 -->
+<section id="view-dash" class="wrap" style="display:none;padding-top:34px;padding-bottom:80px">
+  <div class="banner" id="dash-banner">Firebase 설정 후 실데이터가 표시됩니다. (assets/firebase-config.js)</div>
+  <div class="tabs">
+    <button data-tab="inbox" class="on">문의함</button>
+    <button data-tab="news">뉴스</button>
+    <button data-tab="library">자료실</button>
+    <button data-tab="visits">방문 통계</button>
+  </div>
+
+  <div class="panel on" id="panel-inbox">
+    <div id="inbox-list"><div class="todo"><span class="mono">Inbox</span>불러오는 중…</div></div>
+  </div>
+
+  <div class="panel" id="panel-news">
+    <div class="todo"><span class="mono">TODO · News CRUD</span>
+      뉴스 작성/수정/삭제 UI를 구현하세요. Firestore `news` 컬렉션 사용.<br>
+      <span class="hint">필드: title_ko, title_en, cat_ko, cat_en, excerpt_ko, excerpt_en, date, link, published</span>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-library">
+    <div class="todo"><span class="mono">TODO · Library CRUD</span>
+      자료 업로드/삭제 UI를 구현하세요. 파일은 Storage `library/`, 메타는 Firestore `library` 컬렉션.<br>
+      <span class="hint">필드: title_ko, title_en, desc_ko, desc_en, type, size, file(다운로드 URL)</span>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-visits">
+    <div class="todo"><span class="mono">TODO · Visits Dashboard</span>
+      방문 통계를 집계·표시하세요. Firestore `visits` 컬렉션(+ 필요 시 GA4 연동).<br>
+      <span class="hint">일자별 방문수 / 페이지별 / 언어별 집계, 기간 필터</span>
+    </div>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/firebase-config.js"></script>
+<script type="module" src="assets/firebase.js"></script>
+<script type="module">
+  // 어드민 스캐폴드 로직 — 로그인/상태전환 + 문의함 조회(기본 구현).
+  // 뉴스/자료실/방문 패널은 위 TODO를 채워 완성하세요.
+  const $ = (s)=>document.querySelector(s);
+  const loginView = $('#view-login'), dashView = $('#view-dash');
+  const cfgWarn = $('#cfg-warn'), banner = $('#dash-banner');
+
+  // firebase.js가 window.HOW를 세팅할 때까지 잠깐 대기
+  async function ready(){ for(let i=0;i<40;i++){ if(window.HOW) return window.HOW; await new Promise(r=>setTimeout(r,50)); } return window.HOW||{configured:false}; }
+
+  // 탭 전환
+  document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on', p.id==='panel-'+b.dataset.tab));
+  }));
+
+  (async ()=>{
+    const HOW = await ready();
+    if(!HOW.configured){
+      cfgWarn.textContent = '⚠ Firebase 미설정 상태입니다. assets/firebase-config.js에 값을 입력하면 로그인이 활성화됩니다.';
+      $('#login-form').addEventListener('submit',e=>{e.preventDefault(); cfgWarn.textContent='Firebase 설정 후 이용하세요.';});
+      return;
+    }
+    const { auth, authMod, db, fs } = HOW;
+
+    // 로그인
+    $('#login-form').addEventListener('submit', async (e)=>{
+      e.preventDefault(); $('#login-err').textContent='';
+      try{
+        await authMod.signInWithEmailAndPassword(auth, e.target.email.value, e.target.password.value);
+      }catch(err){ $('#login-err').textContent = '로그인 실패: '+(err.code||err.message); }
+    });
+    $('#logout').addEventListener('click', ()=> authMod.signOut(auth));
+
+    // 인증 상태
+    authMod.onAuthStateChanged(auth, (user)=>{
+      const on = !!user;
+      loginView.style.display = on?'none':'flex';
+      dashView.style.display  = on?'block':'none';
+      $('#logout').style.display = on?'inline-flex':'none';
+      $('#who-email').textContent = on ? user.email : '관리자';
+      if(on) loadInbox();
+    });
+
+    // 문의함 조회 (기본 구현 — 참고용 패턴)
+    async function loadInbox(){
+      const host = $('#inbox-list');
+      try{
+        const q = fs.query(fs.collection(db,'inquiries'), fs.orderBy('createdAt','desc'), fs.limit(50));
+        const snap = await fs.getDocs(q);
+        if(snap.empty){ host.innerHTML = '<div class="todo"><span class="mono">Inbox</span>접수된 문의가 없습니다.</div>'; return; }
+        host.innerHTML = snap.docs.map(d=>{
+          const x = d.data();
+          const type = x.type==='software' ? '개발 의뢰' : '유통 제휴';
+          const when = x.createdAt?.toDate ? x.createdAt.toDate().toLocaleString('ko-KR') : '';
+          const esc = s => String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+          return `<div class="card">
+            <div class="meta"><span class="badge">${type}</span>${when}</div>
+            <h4>${esc(x.name)} · ${esc(x.company||'-')}</h4>
+            <div class="meta">${esc(x.email)} · ${esc(x.phone||'-')}</div>
+            <p style="margin-top:10px;font-size:.94rem;white-space:pre-wrap">${esc(x.message)}</p>
+          </div>`;
+        }).join('');
+      }catch(err){
+        host.innerHTML = '<div class="todo"><span class="mono">오류</span>문의를 불러오지 못했습니다: '+(err.code||err.message)+'</div>';
+      }
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 관리자 판별: 커스텀 클레임(admin:true) 또는 지정 관리자 이메일
+    // 운영 시 ADMIN_EMAIL을 실제 관리자 계정으로 바꾸거나, 커스텀 클레임 방식으로 전환하세요.
+    function isAdmin() {
+      return request.auth != null && (
+        request.auth.token.admin == true ||
+        request.auth.token.email == 'howintlsoft@gmail.com'
+      );
+    }
+
+    // 협력 문의: 누구나 생성(스팸 방지 최소 검증), 열람/수정/삭제는 관리자만
+    match /inquiries/{id} {
+      allow create: if request.resource.data.email is string
+                    && request.resource.data.message is string
+                    && request.resource.data.message.size() < 5000;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // 뉴스 / 자료실: 공개 열람, 작성/수정은 관리자만
+    match /news/{id}    { allow read: if true; allow write: if isAdmin(); }
+    match /library/{id} { allow read: if true; allow write: if isAdmin(); }
+
+    // 방문 로그: 생성만 공개(익명 집계), 열람은 관리자만
+    match /visits/{id}  { allow create: if true; allow read: if isAdmin(); }
+  }
+}

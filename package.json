@@ -1,0 +1,16 @@
+{
+  "name": "howglobal",
+  "version": "0.2.0",
+  "private": true,
+  "description": "하우인터내셔널(HOW INTERNATIONAL) 공식 웹사이트 — 유통 × 소프트웨어",
+  "scripts": {
+    "build": "python3 tools/build.py",
+    "dev": "python3 tools/build.py && python3 -m http.server 5173 --directory public",
+    "serve": "python3 -m http.server 5173 --directory public",
+    "emulate": "firebase emulators:start",
+    "deploy": "npm run build && firebase deploy",
+    "deploy:hosting": "npm run build && firebase deploy --only hosting",
+    "deploy:rules": "firebase deploy --only firestore:rules,storage"
+  },
+  "engines": { "node": ">=18" }
+}
