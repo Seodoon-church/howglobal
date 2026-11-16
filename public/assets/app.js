@@ -77,7 +77,7 @@
     // page modules
     if(page==='news') renderList('news','data/news.json');
     if(page==='library') renderList('library','data/library.json');
-    if(page==='contact') initContactForm();
+    if(page==='quote') initQuoteForm();
   });
 
   /* ---------- news / library ---------- */
@@ -121,7 +121,85 @@
     }).join('') + '</div>';
   }
 
-  /* ---------- contact form ---------- */
+  /* ---------- quote form ---------- */
+  function initQuoteForm(){
+    var form = document.getElementById('quote-form');
+    var success = document.getElementById('quote-success');
+    var resetBtn = document.getElementById('quote-reset');
+    var quoteFields = document.getElementById('quote-fields');
+    if(!form) return;
+
+    // preset type from ?type=media|distribution|healthcare|other
+    try{
+      var p = new URLSearchParams(location.search).get('type');
+      if(p){ selectType(p); }
+    }catch(e){}
+
+    // type card selection
+    form.querySelectorAll('.qtype-card').forEach(function(card){
+      card.addEventListener('click', function(){
+        var t = card.getAttribute('data-type');
+        selectType(t);
+      });
+    });
+
+    function selectType(t){
+      form.querySelectorAll('.qtype-card').forEach(function(c){c.classList.remove('active')});
+      var target = form.querySelector('.qtype-card[data-type="'+t+'"]');
+      if(target){ target.classList.add('active'); var r = target.querySelector('input[type=radio]'); if(r) r.checked = true; }
+      if(quoteFields){
+        if(t==='media'){ quoteFields.classList.remove('hidden'); }
+        else { quoteFields.classList.add('hidden'); }
+      }
+    }
+
+    // reset button
+    if(resetBtn){ resetBtn.addEventListener('click', function(){ if(success) success.style.display='none'; form.style.display=''; form.reset(); selectType('media'); }); }
+
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var lang = window.HOW_LANG || 'ko';
+      var checkedType = (form.querySelector('input[name="qtype"]:checked')||{}).value || 'media';
+      var data = {
+        type: checkedType,
+        budget: (form.budget||{}).value || '',
+        projtype: (form.projtype||{}).value || '',
+        schedule: (form.schedule||{}).value.trim() || '',
+        ref: (form.ref||{}).value.trim() || '',
+        company: form.company.value.trim(),
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        message: form.message.value.trim(),
+        consent: form.consent.checked,
+        createdAt: new Date().toISOString()
+      };
+      if(!data.name||!data.email||!data.message||!data.consent){
+        toast(lang==='en'?'Please fill required fields and agree to the policy.':'필수 항목과 개인정보 동의를 확인해 주세요.',true); return;
+      }
+      if(window.HOW_submitInquiry){
+        window.HOW_submitInquiry(data).then(function(){ done(data.email); }).catch(function(){ mailFallback(data); });
+      } else { mailFallback(data); }
+
+      function done(email){
+        form.style.display='none';
+        if(success){
+          var ep = success.querySelector('p');
+          if(ep) ep.textContent = '담당자가 확인 후 1~2영업일 내 '+(email||'고객님의 이메일')+'로 회신드립니다.';
+          success.style.display='';
+        }
+      }
+      function mailFallback(d){
+        var typeLabel = {distribution:'유통 제휴',healthcare:'헬스케어 제휴',media:'미디어 개발·견적',other:'기타 문의'}[d.type]||d.type;
+        var subj = encodeURIComponent('['+typeLabel+'] '+d.name+(d.company?' / '+d.company:''));
+        var body = encodeURIComponent('유형: '+typeLabel+'\n이름: '+d.name+'\n회사: '+d.company+'\n이메일: '+d.email+'\n연락처: '+d.phone+(d.budget?'\n예산: '+d.budget:'')+(d.schedule?'\n일정: '+d.schedule:'')+'\n\n'+d.message);
+        window.location.href='mailto:howintlsoft@gmail.com?subject='+subj+'&body='+body;
+        toast(lang==='en'?'Opening your email app…':'메일 앱으로 문의 내용을 전달합니다…');
+      }
+    });
+  }
+
+  /* ---------- contact form (legacy) ---------- */
   function toast(msg, err){
     var t = document.getElementById('toast'); if(!t){alert(msg);return;}
     t.textContent = msg; t.classList.toggle('err', !!err); t.classList.add('show');
@@ -129,6 +207,14 @@
   }
   function initContactForm(){
     var form = document.getElementById('inquiry-form'); if(!form) return;
+    // preset inquiry type from ?type=distribution|software
+    try{
+      var p = new URLSearchParams(location.search).get('type');
+      if(p==='software' || p==='distribution'){
+        var r = form.querySelector('input[name="type"][value="'+p+'"]');
+        if(r) r.checked = true;
+      }
+    }catch(e){}
     form.addEventListener('submit', function(ev){
       ev.preventDefault();
       var lang = window.HOW_LANG || 'ko';

@@ -27,15 +27,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/styles.css?v=31e87753">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "하우인터내셔널", "alternateName": "HOW INTERNATIONAL", "url": "https://howglobal.co.kr", "logo": "https://howglobal.co.kr/assets/how-logo.png", "email": "howintlsoft@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "동탄광역환승로73 반도유보라아이비파크8.0 206-604", "addressLocality": "화성시", "addressRegion": "경기도", "addressCountry": "KR"}, "taxID": "214-88-51839", "description": "미국·국산 우수 제품을 유통하고 웹·앱 플랫폼을 자체 개발하는 회사."}</script>
 </head>
 <body data-page="contact">
+<div class="topstrip">
+  <div class="wrap">
+    <span class="ts-main">HOW INTERNATIONAL<span class="ts-sub"> — Global Distribution × Platform Development</span></span>
+    <span class="loc">Hwaseong · Republic of Korea</span>
+  </div>
+</div>
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="하우인터내셔널 홈">
-      <img src="assets/how-logo.png" alt="HOW International" width="120" height="26">
-      <span class="div" data-i18n="brand.tag">Global Distribution · Software</span>
+      <img src="assets/how-logo.png" alt="HOW International" width="120" height="24">
+      <span class="lbl">Global Distribution<br>Platform Development</span>
     </a>
     <button class="burger" aria-label="메뉴 열기" aria-expanded="false"><span></span></button>
     <nav class="menu" aria-label="주요 메뉴">
@@ -43,67 +49,88 @@
     </nav>
     <div class="navr">
       <div class="lang" role="group" aria-label="언어 / Language">
-        <button data-lang="ko" class="on">KO</button><span>·</span><button data-lang="en">EN</button>
+        <button data-lang="en">EN</button><span>·</span><button data-lang="ko" class="on">KO</button>
       </div>
-      <a class="btn blue" data-i18n="cta.header" href="contact.html">협력 문의</a>
+      <a class="btn blue" data-i18n="cta.header" href="contact.html">협력 문의 →</a>
     </div>
   </div>
 </header>
 <section class="subhero">
     <div class="wrap">
-      <div class="crumb rv" data-i18n="ct.crumb">HOME / 협력 문의</div>
-      <h1 class="rv d1" data-i18n="ct.h1" data-i18n-html>협력 문의</h1>
-      <p class="rv d2" data-i18n="ct.lead">유통 제휴 또는 개발 의뢰, 어느 쪽이든 편하게 남겨주세요. 영업일 기준 빠르게 회신드립니다.</p>
+      <div class="crumb rv"><a href="index.html">HOME</a> / <span data-i18n="ct.crumb">협력 문의</span></div>
+      <h1 class="rv d1"><span data-i18n="ct.h1" data-i18n-html>먼저 이야기를 들려주세요.</span></h1>
+      <p class="rv d2"><span data-i18n="ct.lead">유통이든 개발이든, 핵심만 남겨주세요. 영업일 기준 빠르게 회신드립니다.</span></p>
     </div>
-  </section><section class="pad"><div class="wrap">
+  </section><section class="pad s96">
+    <div class="wrap">
       <div class="contact-grid">
-        <form id="inquiry-form" novalidate>
+        <form id="inquiry-form" class="rv" novalidate>
           <div class="field">
-            <label data-i18n="ct.type">문의 유형</label>
+            <label><span data-i18n="ct.type">문의 유형</span> <span class="req">*</span></label>
             <div class="seg">
               <label><input type="radio" name="type" value="distribution" checked> <span data-i18n="ct.type.d">유통 제휴</span></label>
               <label><input type="radio" name="type" value="software"> <span data-i18n="ct.type.s">개발 의뢰</span></label>
             </div>
           </div>
           <div class="two">
-            <div class="field"><label data-i18n="ct.name">이름 <span class="req">*</span></label><input name="name" data-i18n-ph="ph.name" placeholder="성함을 입력하세요" required></div>
-            <div class="field"><label data-i18n="ct.company">회사 / 기관</label><input name="company" data-i18n-ph="ph.company" placeholder="(선택) 회사 또는 기관명"></div>
+            <div class="field"><label><span data-i18n="ct.name">이름</span> <span class="req">*</span></label><input name="name" required></div>
+            <div class="field"><label><span data-i18n="ct.company">회사/기관</span></label><input name="company"></div>
           </div>
           <div class="two">
-            <div class="field"><label data-i18n="ct.email">이메일 <span class="req">*</span></label><input name="email" type="email" data-i18n-ph="ph.email" placeholder="you@example.com" required></div>
-            <div class="field"><label data-i18n="ct.phone">연락처</label><input name="phone" data-i18n-ph="ph.phone" placeholder="010-0000-0000"></div>
+            <div class="field"><label><span data-i18n="ct.email">이메일</span> <span class="req">*</span></label><input name="email" type="email" required></div>
+            <div class="field"><label><span data-i18n="ct.phone">연락처</span></label><input name="phone"></div>
           </div>
-          <div class="field"><label data-i18n="ct.msg">문의 내용 <span class="req">*</span></label><textarea name="message" data-i18n-ph="ph.msg" placeholder="문의하실 내용을 적어주세요." required></textarea></div>
-          <label class="consent"><input type="checkbox" name="consent"> <span data-i18n="ct.consent">개인정보 수집·이용에 동의합니다. (문의 응대 목적, 응대 후 파기)</span></label>
-          <button class="btn blue lg" type="submit" data-i18n="ct.submit">문의 보내기 →</button>
-          <p class="formnote" data-i18n="ct.formnote">접수 후 howintlsoft@gmail.com 으로 회신드립니다.</p>
+          <div class="field"><label><span data-i18n="ct.msg">문의 내용</span> <span class="req">*</span></label><textarea name="message" required></textarea></div>
+          <label class="consent"><input type="checkbox" name="consent"> <span data-i18n="ct.consent">문의 처리 목적의 개인정보 수집·이용에 동의합니다.</span></label>
+          <button class="btn blue lg" type="submit"><span data-i18n="ct.submit">문의 보내기 →</span></button>
+          <p class="formnote" data-i18n="ct.formnote" data-i18n-html data-i18n-html>이메일이 편하시면 <a href="mailto:howintlsoft@gmail.com">howintlsoft@gmail.com</a> 로 보내주세요.</p>
         </form>
         <aside class="aside-card rv d1">
-          <h4 data-i18n="ct.aside">직접 연락</h4>
+          <h4><span data-i18n="ct.aside">직접 연락</span></h4>
           <dl class="info">
-            <div><dt>Email</dt><dd><a href="mailto:howintlsoft@gmail.com" style="color:var(--blue)">howintlsoft@gmail.com</a></dd></div>
-            <div><dt data-i18n="info.addr">주소</dt><dd data-i18n="info.addr.v" data-i18n-html>경기도 화성시 동탄광역환승로73 반도유보라아이비파크8.0 206-604</dd></div>
-            <div><dt data-i18n="info.regno">사업자등록번호</dt><dd>214-88-51839</dd></div>
+            <div><dt><span data-i18n="ct.email">이메일</span></dt><dd><a href="mailto:howintlsoft@gmail.com">howintlsoft@gmail.com</a></dd></div>
+            <div><dt><span data-i18n="ct.aside.web">웹</span></dt><dd><a href="https://howglobal.co.kr">howglobal.co.kr</a></dd></div>
+            <div><dt><span data-i18n="info.addr">주소</span></dt><dd><span data-i18n="info.addr.v">경기도 화성시 동탄광역환승로73 반도유보라아이비파크8.0 206-604</span></dd></div>
+            <div><dt><span data-i18n="ct.aside.reg">사업자</span></dt><dd>214-88-51839</dd></div>
           </dl>
+          <div class="resp">
+            <div class="rl"><span data-i18n="ct.resp.l">회신</span></div>
+            <p><span data-i18n="ct.resp.p">보통 영업일 기준 1~2일 내에 회신드립니다.</span></p>
+          </div>
         </aside>
       </div>
-    </div></section><footer class="site">
+    </div>
+  </section><footer class="site">
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
         <img src="assets/how-logo.png" alt="HOW International">
-        <div class="ft">하우인터내셔널 (HOW INTERNATIONAL)<br><span data-i18n="foot.tagline">검증된 유통, 우리가 만든 플랫폼.</span></div>
+        <div class="ft">Global Distribution<br>Platform Development</div>
+        <p class="tagline"><span data-i18n="foot.tagline">해외에서 검증된 제품을 들여오고, 필요한 플랫폼을 직접 만드는 하나의 팀.</span></p>
       </div>
       <div class="fcol">
-        <h5 data-i18n="foot.sitemap">Sitemap</h5>
-        <a data-i18n="nav.business" href="business.html">사업분야</a><a data-i18n="nav.about" href="about.html">회사소개</a><a data-i18n="nav.news" href="news.html">뉴스</a><a data-i18n="nav.library" href="library.html">자료실</a><a data-i18n="nav.contact" href="contact.html">협력 문의</a>
+        <h5>사이트맵</h5>
+        <div class="flist"><a data-i18n="nav.business" href="business.html">사업분야</a><a data-i18n="nav.about" href="about.html">회사소개</a><a data-i18n="nav.news" href="news.html">뉴스</a><a data-i18n="nav.library" href="library.html">자료실</a><a data-i18n="foot.partner" href="contact.html">협력 문의</a></div>
       </div>
       <div class="fcol">
-        <h5 data-i18n="foot.company">Company</h5>
-        <p data-i18n="foot.bizno">사업자등록번호 214-88-51839</p>
-        <p data-i18n="foot.addr" data-i18n-html>경기도 화성시 동탄광역환승로73<br>반도유보라아이비파크8.0 206-604</p>
-        <a href="mailto:howintlsoft@gmail.com">howintlsoft@gmail.com</a>
-        <a href="https://howglobal.co.kr">howglobal.co.kr</a>
+        <h5>브랜드</h5>
+        <div class="flist">
+          <a href="https://biotamax.co.kr" target="_blank" rel="noopener">BiotaMax ↗</a>
+          <a href="https://painfree8800.com" target="_blank" rel="noopener">Painfree 8800 ↗</a>
+          <a href="https://marketshare-2e00c.web.app/" target="_blank" rel="noopener">marketshare ↗</a>
+          <a href="https://koreanflow.app" target="_blank" rel="noopener">KoreanFlow ↗</a>
+          <a href="https://familya.co.kr" target="_blank" rel="noopener">familya ↗</a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h5>회사정보</h5>
+        <div class="company">
+          <span data-i18n="foot.name">하우인터내셔널</span>
+          <span data-i18n="foot.bizno">사업자등록번호 214-88-51839</span>
+          <span data-i18n="foot.addr" data-i18n-html data-i18n-html>경기도 화성시 동탄광역환승로73<br>반도유보라아이비파크8.0 206-604</span>
+          <a href="mailto:howintlsoft@gmail.com">howintlsoft@gmail.com</a>
+          <a href="https://howglobal.co.kr">howglobal.co.kr</a>
+        </div>
       </div>
     </div>
     <div class="fbot">
@@ -114,7 +141,7 @@
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="assets/firebase-config.js"></script>
-<script src="assets/i18n.js"></script>
+<script src="assets/i18n.js?v=31e87753"></script>
 <script type="module" src="assets/firebase.js"></script>
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=31e87753"></script>
 </body></html>

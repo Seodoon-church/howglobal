@@ -5,7 +5,7 @@
 
 ## 프로젝트
 - **무엇**: 하우인터내셔널(HOW INTERNATIONAL) 공식 웹사이트. 신규 도메인 **howglobal.co.kr**.
-- **성격**: 두 사업부(유통 × 소프트웨어 개발)를 소개하는 프리미엄 B2B 사이트 + 관리자 어드민.
+- **성격**: 세 사업부(유통 · 헬스케어 · 디지털미디어)를 소개하는 프리미엄 B2B 사이트 + 관리자 어드민.
 - **스택**: 바닐라 정적 사이트(프레임워크 없음) + **Firebase**(Hosting · Auth · Firestore · Storage). GA4(선택).
   - 프레임워크를 쓰지 않는 것은 **의도된 선택**입니다. 공개 사이트와 어드민을 하나의 가벼운 스택으로 유지합니다. 새 라이브러리/빌드도구 도입은 먼저 제안·컨펌 후에.
 
@@ -19,25 +19,27 @@
 ## 회사 정보 (푸터·SEO·문의처의 정본)
 - 사명: 하우인터내셔널 (HOW INTERNATIONAL)
 - 사업자등록번호: **214-88-51839**
-- 주소: 경기도 화성시 동탄광역환승로73 반도유보라아이비파크8.0 206-604
+- 주소: 경기도 화성시 동탄광역환승로73
 - 이메일: **howintlsoft@gmail.com** (기본 관리자 계정 후보)
 - 도메인: howglobal.co.kr
 
 ## 사업 구성 (콘텐츠 정본)
-- **유통(Distribution)**
-  - 바이오타맥스(BiotaMax) — 미국 직수입 토양생균제, 10종 유익 토양미생물 · https://biotamax.co.kr
-  - Painfree 8800 — KFDA Class III 6-in-1 통증치료 의료기기(제조 GM R&D) · https://painfree8800.com
-- **소프트웨어(Software)**
+- **디지털미디어사업부 (DIV. 01)**
   - marketshare — 분양몰 솔루션 · https://marketshare-2e00c.web.app/
-  - KoreanFlow — 한국어 학습 · https://koreanflow.app
+  - KoreanFlow — 한국어 학습 플랫폼 · https://koreanflow.app
   - 우리家 이야기(familya) — 디지털 족보 · https://familya.co.kr
+  - 고객 맞춤 플랫폼 개발 (수탁)
+- **헬스케어사업부 (DIV. 02)**
+  - Painfree 8800 — KFDA Class III 6-in-1 통증치료 의료기기(제조 GM R&D) · https://painfree8800.com
+- **유통사업부 (DIV. 03)**
+  - 바이오타맥스(BiotaMax) — 미국 직수입 토양생균제, 10종 유익 토양미생물 · https://biotamax.co.kr
 
 ## 브랜드 토큰 (styles.css의 :root)
 - 블루(강조 전용): `#0000FF` / blue-ink `#0D1BD1`
 - 잉크 `#0A0C14` · 보조 `#20242F` · muted `#6A707E`
 - 화이트 `#FFFFFF` · 미스트 `#F4F5F8` · 블루워시 `#EEF0FF` · 라인 `#E4E6EC`
 - 폰트: **Pretendard**(국문/본문) · **Space Grotesk**(라틴 디스플레이) · **Space Mono**(스펙 라벨)
-- 톤: 블루는 **포인트로만**. 편집형 카탈로그 + 모노 스펙 라벨(“유통 × 개발” 2-디비전).
+- 톤: 블루는 **포인트로만**. 편집형 카탈로그 + 모노 스펙 라벨(3-디비전: 유통 · 헬스케어 · 디지털미디어).
 
 ## 저장소 구조
 ```
