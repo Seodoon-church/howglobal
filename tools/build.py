@@ -34,11 +34,11 @@ T = {
               "73 Dongtan-gwangyeokhwanseung-ro,<br>Hwaseong-si, Gyeonggi-do, Korea"),
  "foot.admin":("· 관리자","· Admin"),
  # home hero
- "home.eyebrow":("글로벌 디지털미디어 × 헬스케어 × 유통","Global Digital Media × Healthcare × Distribution"),
+ "home.eyebrow":("글로벌 디지털미디어 × 헬스케어 × 유통 × 에너지","Global Digital Media × Healthcare × Distribution × Energy"),
  "home.h1":("필요한 플랫폼을 만들고,<br>건강을 지키고,<br>검증된 제품을 유통합니다.",
             "We build the platforms you need,<br>protect your health,<br>and distribute proven products."),
- "home.lead":("하우인터내셔널은 디지털미디어·헬스케어·유통 세 영역에서 각기 검증된 결과를 만듭니다.",
-              "HOW International delivers proven results across digital media, healthcare, and distribution."),
+ "home.lead":("하우인터내셔널은 디지털미디어·헬스케어·유통·에너지 네 영역에서 각기 검증된 결과를 만듭니다.",
+              "HOW International delivers proven results across digital media, healthcare, distribution, and energy."),
  "home.cta1":("사업분야 살펴보기 →","Explore our business →"),
  "home.cta2":("견적 상담하기","Get a quote"),
  "legend.hq":("본사 · 화성, 대한민국","HQ · Hwaseong, Korea"),
@@ -245,7 +245,7 @@ T = {
  "about.co.eye":("회사 정보","Company"),
  "info.name":("사명","Name"),
  "info.biz":("대표 사업","Business"),
- "info.biz.v":("디지털미디어 · 헬스케어 · 유통","Digital Media · Healthcare · Distribution"),
+ "info.biz.v":("디지털미디어 · 헬스케어 · 유통 · 에너지(ESCO)","Digital Media · Healthcare · Distribution · Energy (ESCO)"),
  "info.reg":("사업자등록번호","Biz. Reg."),
  "info.addr":("주소","Address"),
  "info.addr.v":("경기도 화성시 동탄광역환승로73",
@@ -262,10 +262,276 @@ T = {
  "lib.h1":("자료실","Library."),
  "lib.lead":("브랜드·플랫폼 브로슈어, 스펙 시트 및 자료를 제공합니다.",
              "Brochures, spec sheets and documents for our brands and platforms."),
+ # ===== ESCO (DIV.04 에너지사업부) =====
+ "nav.esco":("ESCO","ESCO"),
+ # home overview card (DIV.04)
+ "ov.d4.no":("DIV. 04","DIV. 04"),
+ "ov.d4.t":("에너지사업부","Energy"),
+ "ov.d4.lt":("ESCO · 조명효율화 · 성과보증","ESCO · Lighting · Guaranteed"),
+ "ov.d4.p":("초기비용 0원으로 노후 조명을 고효율 LED로 바꾸고, 절감액으로 상환하는 조명 ESCO 사업을 제안·총괄합니다.",
+            "We propose and manage lighting-ESCO projects — upgrading aging lighting to high-efficiency LEDs at zero upfront cost, repaid from the savings."),
+ "ov.d4.li1":("조명 ESCO · 무료 절감 진단","Lighting ESCO · free diagnosis"),
+ "ov.d4.go":("에너지(ESCO) 보기 →","View energy (ESCO) →"),
+ # business section (DIV.04)
+ "biz.d4.eye":("DIV. 04 · 에너지사업부","DIV. 04 · Energy Division"),
+ "biz.d4.h2":("초기비용 0원, 절감액으로 갚는 조명 ESCO.","Lighting ESCO — zero upfront, paid from savings."),
+ "biz.d4.lead":("켑코이에스㈜·㈜투반산업과 함께 조명 ESCO 사업을 제안·총괄합니다. 노후 조명을 3세대 스마트 AI LED로 바꾸고 절감액으로 상환합니다.",
+                "With KEPCO ES and Tuban Industry, we propose and manage lighting-ESCO projects — replacing aging lighting with 3rd-gen smart AI LEDs, repaid from savings."),
+ "biz.d4.go1":("ESCO 자세히 보기 →","Learn more about ESCO →"),
+ "biz.d4.go2":("무료 진단 신청 →","Request a free diagnosis →"),
+ # quote type
+ "qt.type.esco":("ESCO 진단","ESCO diagnosis"),
+ "qt.esco.note":("조명 ESCO 무료 진단은 전용 페이지에서 시설 정보와 함께 신청하면 더 정확합니다.",
+                 "For a lighting-ESCO diagnosis, the dedicated page lets you include facility details for a more accurate review."),
+ "qt.esco.go":("ESCO 진단 신청 페이지로 →","Go to the ESCO diagnosis page →"),
+ # --- esco page: hero ---
+ "esco.crumb":("ESCO","ESCO"),
+ "esco.eyebrow":("DIV. 04 · 에너지사업부 · ESCO","DIV. 04 · Energy Division · ESCO"),
+ "esco.h1":("초기비용 0원,<br>아낀 전기요금으로 갚는 조명 교체",
+            "Zero upfront cost,<br>lighting upgrades repaid from the energy you save"),
+ "esco.lead":("노후 조명을 3세대 스마트 AI LED로 바꾸고, 공사비는 매달 줄어든 전기요금 안에서만 나누어 갚습니다. 계약이 끝나면 절감액은 전부 고객의 몫입니다.",
+              "Replace aging lighting with 3rd-gen smart AI LEDs and repay the cost only from your reduced monthly bills. When the contract ends, all savings are yours."),
+ "esco.kpi1.n":("0원","₩0"),
+ "esco.kpi1.l":("초기 투자비","Upfront cost"),
+ "esco.kpi2.n":("최대 70%대","Up to ~70%"),
+ "esco.kpi2.l":("조명 전력 절감 (실측 사례 기준)","Lighting-power savings (measured cases)"),
+ "esco.kpi3.n":("5년","5 years"),
+ "esco.kpi3.l":("무상 A/S","Free A/S"),
+ "esco.cta.apply":("무료 절감 진단 신청 →","Request a free savings diagnosis →"),
+ "esco.cta.calc":("예상 절감액 계산하기","Estimate your savings"),
+ # --- what is esco ---
+ "esco.what.eye":("ESCO란?","What is ESCO?"),
+ "esco.what.h2":("자금·기술 부담 없이<br>고효율 설비로.","High-efficiency equipment,<br>without the capital burden."),
+ "esco.what.p":("ESCO(Energy Service Company)는 에너지 사용자가 자금·기술 부담 없이 고효율 설비로 바꿀 수 있도록, 전문 기업이 먼저 투자하고 절감액으로 돌려받는 에너지이용합리화법 기반 사업 방식입니다.",
+                "ESCO (Energy Service Company) is a model under Korea's Energy Use Rationalization Act: a specialist firm invests first in high-efficiency equipment and recovers the cost from the resulting savings — so the user bears no upfront capital or technical burden."),
+ "esco.flow1.t":("① 무료 진단","① Free diagnosis"),
+ "esco.flow1.p":("고지서·등기구 조사","Review bills & fixtures"),
+ "esco.flow2.t":("② 선투자·시공","② Investment & install"),
+ "esco.flow2.p":("사업자가 전액 부담","Fully funded by the provider"),
+ "esco.flow3.t":("③ 절감액 상환","③ Repay from savings"),
+ "esco.flow3.p":("줄어든 요금 범위 안에서","Within the reduced bill"),
+ "esco.flow4.t":("④ 계약 종료","④ Contract ends"),
+ "esco.flow4.p":("설비는 고객 소유, 절감액 100% 고객 몫","Equipment yours; 100% of savings yours"),
+ "esco.cmp.c0":("구분","Item"),
+ "esco.cmp.c1":("자체 예산 교체","Self-funded"),
+ "esco.cmp.c2":("ESCO","ESCO"),
+ "esco.cmp.r1":("초기 비용","Upfront cost"),
+ "esco.cmp.r1a":("수억 원","Hundreds of millions of won"),
+ "esco.cmp.r1b":("0원","₩0"),
+ "esco.cmp.r2":("재정 영향","Financial impact"),
+ "esco.cmp.r2a":("일시 지출","Lump-sum outlay"),
+ "esco.cmp.r2b":("절감액 내 분할 상환","Repaid within savings"),
+ "esco.cmp.r3":("유지보수","Maintenance"),
+ "esco.cmp.r3a":("자체 부담","Self-borne"),
+ "esco.cmp.r3b":("5년 무상 A/S","5-yr free A/S"),
+ "esco.cmp.r4":("성과 책임","Performance risk"),
+ "esco.cmp.r4a":("사용자 부담","On the user"),
+ "esco.cmp.r4b":("사업자 성과 보증","Provider-guaranteed"),
+ # --- 3rd-gen LED ---
+ "esco.led.eye":("3세대 스마트 AI LED","3rd-gen Smart AI LED"),
+ "esco.led.h2":("오래 켤수록<br>차이가 커집니다.","The longer it runs,<br>the bigger the gap."),
+ "esco.led.c0":("구분","Spec"),
+ "esco.led.c1":("1세대 형광등","Gen 1 Fluorescent"),
+ "esco.led.c2":("2세대 일체형 LED","Gen 2 Integrated LED"),
+ "esco.led.c3":("3세대 스마트 AI LED","Gen 3 Smart AI LED"),
+ "esco.led.r1":("1W당 밝기","Lumens per watt"),
+ "esco.led.r1c":("160 lm 이상","160 lm+"),
+ "esco.led.r2":("수명","Lifespan"),
+ "esco.led.r2a":("3,000시간","3,000 hrs"),
+ "esco.led.r2b":("20,000시간","20,000 hrs"),
+ "esco.led.r2c":("100,000시간","100,000 hrs"),
+ "esco.led.r3":("A/S","A/S"),
+ "esco.led.r3a":("없음","None"),
+ "esco.led.r3b":("1년 전후","~1 year"),
+ "esco.led.r3c":("기본 5년 (최대 10년)","5 yrs (up to 10)"),
+ "esco.led.r4":("고장 시","On failure"),
+ "esco.led.r4ab":("전체 교체","Replace all"),
+ "esco.led.r4c":("고장 부품만 교체","Swap faulty part only"),
+ "esco.led.f1":("모듈형 구조","Modular structure"),
+ "esco.led.f1p":("고장 부품만 교체해 유지비를 낮춥니다.","Swap only the faulty part to cut maintenance cost."),
+ "esco.led.f2":("모션 감지 디밍","Motion-sensing dimming"),
+ "esco.led.f2p":("사람·차량이 없으면 최저 밝기, 감지 즉시 최대 밝기.","Dims to minimum when empty, full brightness on detection."),
+ "esco.led.f3":("채광 연동 조도 제어","Daylight-linked control"),
+ "esco.led.f3p":("자연 채광에 맞춰 밝기를 자동 조절합니다.","Auto-adjusts brightness to available daylight."),
+ # --- targets ---
+ "esco.tg.eye":("대상별 안내","By facility"),
+ "esco.tg.h2":("어떤 시설이든<br>자주 켜는 곳부터.","Any facility —<br>starting where lights run most."),
+ "esco.tg.ratelbl":("예상 절감률","Est. savings"),
+ "esco.tg.speedlbl":("상환 속도","Payback"),
+ "esco.tg.btn":("이 시설로 진단 신청 →","Request a diagnosis for this facility →"),
+ "esco.tg.slownote":("사용 시간이 짧아 상환 기간이 길어질 수 있어, 자주 켜는 구역부터 적용하거나 여러 시설을 묶어 진행합니다.",
+                     "With shorter usage hours, payback can take longer — so we start with the most-used areas or bundle multiple sites."),
+ "esco.spd.vfast":("매우 빠름","Very fast"),
+ "esco.spd.fast":("빠름","Fast"),
+ "esco.spd.normal":("보통","Moderate"),
+ "esco.spd.slow":("느림","Slow"),
+ "esco.tg.apartment.n":("아파트","Apartments"),
+ "esco.tg.apartment.s":("24시간 켜진 지하주차장이 핵심. 관리비 추가 부담 없이 교체합니다.",
+                        "The 24/7 underground parking is the key — upgraded with no added maintenance fees."),
+ "esco.tg.apartment.r":("약 70%","~70%"),
+ "esco.tg.parking.n":("주차장·주차빌딩","Parking lots & garages"),
+ "esco.tg.parking.s":("24시간 점등 + 모션 디밍으로 가장 큰 효과를 냅니다.",
+                      "24/7 operation plus motion dimming delivers the biggest effect."),
+ "esco.tg.parking.r":("약 75%","~75%"),
+ "esco.tg.factory.n":("공장·물류센터","Factories & logistics"),
+ "esco.tg.factory.s":("긴 점등 시간, 작업장 조도 기준·RE100 대응에 적합합니다.",
+                      "Long operating hours; meets workplace lux standards and RE100 goals."),
+ "esco.tg.factory.r":("약 65%","~65%"),
+ "esco.tg.hospital.n":("병원·요양시설","Hospitals & care facilities"),
+ "esco.tg.hospital.s":("24시간 복도·병동, 환자에게 편안한 빛을 제공합니다.",
+                       "24/7 corridors and wards with comfortable light for patients."),
+ "esco.tg.hospital.r":("약 50%","~50%"),
+ "esco.tg.building.n":("일반빌딩","Commercial buildings"),
+ "esco.tg.building.s":("운영비를 줄이고 임차인 관리비 경쟁력을 높입니다.",
+                       "Lowers operating cost and improves tenant competitiveness."),
+ "esco.tg.building.r":("약 60%","~60%"),
+ "esco.tg.retail.n":("대형마트·판매시설","Retail & big-box stores"),
+ "esco.tg.retail.s":("매장은 더 밝게, 전기요금은 더 적게.","Brighter sales floors, lower electricity bills."),
+ "esco.tg.retail.r":("약 60%","~60%"),
+ "esco.tg.public.n":("지자체·공공기관","Government & public"),
+ "esco.tg.public.s":("본예산 없이 에너지 절감 의무·탄소중립 실적을 달성합니다.",
+                     "Meets energy-saving mandates and carbon-neutrality targets without a capital budget."),
+ "esco.tg.public.r":("약 60%","~60%"),
+ "esco.tg.university.n":("대학교","Universities"),
+ "esco.tg.university.s":("도서관·연구동 등 장시간 사용 건물부터 적용합니다.",
+                        "Starting with long-use buildings like libraries and research halls."),
+ "esco.tg.university.r":("약 55%","~55%"),
+ "esco.tg.school.n":("학교·유치원","Schools & kindergartens"),
+ "esco.tg.school.s":("교실 조도 기준(책상면 300럭스)과 학생 눈 건강을 지킵니다.",
+                     "Keeps classroom lux standards (300 lx at the desk) and protects students' eyes."),
+ "esco.tg.school.r":("약 65%","~65%"),
+ "esco.tg.church.n":("교회·종교시설","Churches & religious"),
+ "esco.tg.church.s":("헌금의 청지기적 사용, 영상 예배에 깜빡임 없는 조명.",
+                     "Faithful stewardship of giving, with flicker-free light for recorded worship."),
+ "esco.tg.church.r":("약 55%","~55%"),
+ "esco.tg.welfare.n":("사회복지시설","Welfare facilities"),
+ "esco.tg.welfare.s":("운영비를 복지 서비스로, 어르신 낙상 예방에도 도움.",
+                      "Turns operating cost into welfare service and helps prevent falls among seniors."),
+ "esco.tg.welfare.r":("약 45%","~45%"),
+ # --- calculator ---
+ "esco.calc.eye":("간이 절감 계산기","Quick savings estimator"),
+ "esco.calc.h2":("1분이면<br>대략 가늠해 볼 수 있습니다.","A rough estimate<br>in about a minute."),
+ "esco.calc.flbl":("시설 유형","Facility type"),
+ "esco.calc.blbl":("월평균 전기요금 (원)","Avg. monthly electricity bill (KRW)"),
+ "esco.calc.blbl.apt":("월평균 공용 전기요금 (원)","Avg. monthly common-area bill (KRW)"),
+ "esco.calc.bph":("예: 2,000,000","e.g., 2,000,000"),
+ "esco.calc.btn":("예상 절감액 보기","See estimated savings"),
+ "esco.calc.applybtn":("이 조건으로 진단 신청 →","Apply with these details →"),
+ "esco.calc.resultpre":("예상 절감","Estimated savings"),
+ "esco.calc.month":("월","month"),
+ "esco.calc.year":("연","year"),
+ "esco.calc.unit":("만원","0k KRW"),
+ "esco.calc.disclaimer":("이 결과는 업종 평균을 가정한 대략적인 범위입니다. 실제 절감액은 고지서와 현장 조사를 바탕으로 한 무료 진단 후 확정됩니다.",
+                         "This is a rough range based on industry averages. Actual savings are confirmed after a free on-site diagnosis using your bills."),
+ # --- cases ---
+ "esco.case.eye":("실증 사례","Proven cases"),
+ "esco.case.h2":("숫자로 증명된<br>절감입니다.","Savings proven<br>in numbers."),
+ "esco.case.c0":("현장","Site"),
+ "esco.case.c1":("내용","Scope"),
+ "esco.case.c2":("결과","Result"),
+ "esco.case.r1s":("천안 지하주차장","Cheonan underground parking"),
+ "esco.case.r1c":("938개 교체, 10~60 lx → 50~150 lx","938 fixtures, 10–60 lx → 50–150 lx"),
+ "esco.case.r1r":("일 720 → 202 kWh (72% 절감)","720 → 202 kWh/day (−72%)"),
+ "esco.case.r2s":("서울시설공단 영남주차장","Seoul Facilities Corp. Yeongnam parking"),
+ "esco.case.r2c":("160개 (40W→18W)","160 fixtures (40W→18W)"),
+ "esco.case.r2r":("일 154 → 50 kWh (60% 절감)","154 → 50 kWh/day (−60%)"),
+ "esco.case.r3s":("울산 상북 하나로마트","Ulsan Sangbuk Hanaro Mart"),
+ "esco.case.r3c":("실내등 200개, 680~800 lx → 1,200~1,400 lx","200 indoor fixtures, 680–800 lx → 1,200–1,400 lx"),
+ "esco.case.r3r":("일 120 → 72 kWh (40% 절감)","120 → 72 kWh/day (−40%)"),
+ "esco.case.r4s":("산업 현장 계약","Industrial site contract"),
+ "esco.case.r4c":("2025년 10월 대형 타이어 제조공장 LED 에너지효율화사업 계약","Oct 2025 — LED efficiency contract, large tire plant"),
+ "esco.case.r4r":("사업금액 약 8.4억 원","Contract value ≈ ₩840M"),
+ # --- structure ---
+ "esco.str.eye":("사업 구조","Structure"),
+ "esco.str.h2":("네 주체가<br>함께 책임집니다.","Four parties,<br>shared accountability."),
+ "esco.str.user.t":("에너지사용자","Energy user"),
+ "esco.str.user.p":("고객 — 의사결정·계약·절감액 내 상환","Customer — decisions, contract, repayment within savings"),
+ "esco.str.esco.t":("에너지효율화사업자","Energy-efficiency provider"),
+ "esco.str.esco.p":("켑코이에스㈜ — 사업 주관·금융·절감량 확인·성과 보증","KEPCO ES — project lead, financing, savings verification, performance guarantee"),
+ "esco.str.epc.t":("EPC","EPC"),
+ "esco.str.epc.p":("㈜투반산업 — 제조·시공·하자보증 60개월·A/S","Tuban Industry — manufacturing, installation, 60-mo warranty, A/S"),
+ "esco.str.how.t":("하우인터내셔널 — 제안·사업 총괄","HOW International — proposal & program management"),
+ "esco.str.how.p":("상담 창구, 무료 진단 연결, 의사결정 기구 설명 지원, 계약~준공 관리","Consultation desk, diagnosis coordination, decision-body support, contract-to-completion management"),
+ "esco.str.steps.l":("진행 절차","Process"),
+ "esco.str.step1":("상담·자료 접수","Intake & consultation"),
+ "esco.str.step2":("현장 조사·진단 보고서","Site survey & diagnosis report"),
+ "esco.str.step3":("내부 의결 (입대의·당회·운영위 등)","Internal approval (board/committee)"),
+ "esco.str.step4":("3자 계약","Tripartite contract"),
+ "esco.str.step5":("시공","Installation"),
+ "esco.str.step6":("준공 실사·절감량 확인","Completion audit & savings check"),
+ "esco.str.step7":("상환·사후관리","Repayment & after-care"),
+ # --- faq ---
+ "esco.faq.eye":("자주 묻는 질문","FAQ"),
+ "esco.faq.h2":("궁금한 점,<br>먼저 답해 드립니다.","Answers,<br>before you ask."),
+ "esco.faq.q1":("정말 초기 비용이 없나요?","Is there really no upfront cost?"),
+ "esco.faq.a1":("공사비는 사업자가 먼저 부담하고, 줄어든 전기요금 범위 안에서만 상환합니다.",
+                "The provider funds the work first, and you repay only within your reduced electricity bill."),
+ "esco.faq.q2":("절감이 예상보다 적으면요?","What if savings fall short?"),
+ "esco.faq.a2":("준공 후 실사로 절감량을 확인하며, 에너지 효율 보증서에 따라 성과 미달 책임은 사업자가 집니다.",
+                "Savings are verified by a post-completion audit, and under the energy-efficiency guarantee the provider bears the risk of any shortfall."),
+ "esco.faq.q3":("센서등이라 어둡지 않나요?","Won't sensor lighting be too dark?"),
+ "esco.faq.a3":("사람·차량이 없을 때만 최저 밝기로 낮추고 감지 즉시 최대 밝기로 켜집니다. 실측 사례에서 평균 밝기는 오히려 높아졌습니다.",
+                "It dims to minimum only when the area is empty and jumps to full brightness on detection. In measured cases, average brightness actually increased."),
+ "esco.faq.q4":("계약 기간 중 고장 나면요?","What if something breaks during the contract?"),
+ "esco.faq.a4":("5년 무상 A/S로, 고장 부품만 교체합니다.","Five years of free A/S — only the faulty part is replaced."),
+ "esco.faq.q5":("계약이 끝나면 설비는 누구 것인가요?","Who owns the equipment after the contract?"),
+ "esco.faq.a5":("고객 소유가 되고, 이후 절감액은 전부 고객 몫입니다.","It becomes yours, and all savings thereafter are entirely yours."),
+ "esco.faq.q6":("진단에 비용이 드나요?","Does the diagnosis cost anything?"),
+ "esco.faq.a6":("무료이며 계약 의무가 없습니다.","It's free and comes with no obligation to contract."),
+ "esco.faq.q7":("어떤 자료가 필요한가요?","What documents are needed?"),
+ "esco.faq.a7":("최근 1년분 전기요금 고지서(또는 한전 파워플래너 ID)와 사업자(고유번호)등록증이 필요합니다. 등기구 현황은 현장 조사로 파악합니다.",
+                "The last 12 months of electricity bills (or your KEPCO PowerPlanner ID) and a business/registration certificate. Fixture details are captured during the site survey."),
+ # --- apply form ---
+ "esco.apply.eye":("무료 진단 신청","Free diagnosis"),
+ "esco.apply.h2":("고지서만 있으면<br>시작할 수 있습니다.","If you have your bill,<br>we can start."),
+ "esco.f.facility":("시설 유형","Facility type"),
+ "esco.f.other":("기타","Other"),
+ "esco.f.fname":("시설명","Facility name"),
+ "esco.f.fname.ph":("예: ○○아파트, ○○교회","e.g., ○○ Apartments, ○○ Church"),
+ "esco.f.region":("지역","Region"),
+ "esco.f.region.ph":("예: 대전 서구","e.g., Seo-gu, Daejeon"),
+ "esco.f.scale":("규모","Size"),
+ "esco.f.scale.ph":("예: 1,500세대 / 연면적 5,000㎡ / 등기구 약 800개 (아는 만큼)",
+                    "e.g., 1,500 units / 5,000㎡ / ~800 fixtures (as known)"),
+ "esco.f.bill":("월평균 전기요금","Avg. monthly bill"),
+ "esco.f.bill.0":("모름","Not sure"),
+ "esco.f.bill.1":("100만원 미만","Under ₩1M"),
+ "esco.f.bill.2":("100~300만원","₩1–3M"),
+ "esco.f.bill.3":("300~1,000만원","₩3–10M"),
+ "esco.f.bill.4":("1,000만원 이상","Over ₩10M"),
+ "esco.f.role":("신청인 구분","Your role"),
+ "esco.f.role.0":("선택","Select"),
+ "esco.f.role.1":("관리사무소","Management office"),
+ "esco.f.role.2":("입주자대표회의","Residents' council"),
+ "esco.f.role.3":("시설·행정 담당","Facility / admin staff"),
+ "esco.f.role.4":("대표·임원","Owner / executive"),
+ "esco.f.role.5":("기타","Other"),
+ "esco.f.name":("담당자명","Contact name"),
+ "esco.f.name.ph":("홍길동","Your name"),
+ "esco.f.phone":("연락처","Phone"),
+ "esco.f.phone.ph":("010-0000-0000","010-0000-0000"),
+ "esco.f.email":("이메일","Email"),
+ "esco.f.email.ph":("name@company.com","name@company.com"),
+ "esco.f.ctime":("연락 가능 시간","Best time to contact"),
+ "esco.f.ctime.0":("언제든","Anytime"),
+ "esco.f.ctime.1":("오전","Morning"),
+ "esco.f.ctime.2":("오후","Afternoon"),
+ "esco.f.note":("추가 요청사항","Notes"),
+ "esco.f.note.ph":("현장 상황이나 궁금한 점을 적어주세요.","Tell us about your site or any questions."),
+ "esco.f.consent":("개인정보 수집·이용에 동의합니다. 진단 상담 목적으로만 사용하며 상담 종료 후 파기합니다.",
+                   "I agree to the collection and use of my information for diagnosis consultation only; it is discarded afterward."),
+ "esco.f.submit":("무료 진단 신청하기 →","Request free diagnosis →"),
+ "esco.f.formnote":('급하신 경우 <a href="mailto:howintlsoft@gmail.com">howintlsoft@gmail.com</a>으로 바로 메일 주셔도 됩니다.',
+                    'In urgent cases, email us at <a href="mailto:howintlsoft@gmail.com">howintlsoft@gmail.com</a>.'),
+ "esco.done.tag":("접수 완료","Received"),
+ "esco.done.h":("진단 신청이 접수되었습니다.","Your diagnosis request has been received."),
+ "esco.done.p":("담당자가 1~2영업일 안에 연락드립니다. 시설 유형에 맞는 제안서도 함께 보내드립니다. 빠른 진행을 원하시면 최근 1년분 전기요금 고지서를 준비해 주세요.",
+                "We'll contact you within 1–2 business days and send a proposal matched to your facility. To move faster, please have the last 12 months of electricity bills ready."),
+ "esco.done.reset":("새 신청 작성하기","Start a new request"),
 }
 
 PAGES = {
-    "business":"business.html","portfolio":"portfolio.html","about":"about.html",
+    "business":"business.html","portfolio":"portfolio.html","esco":"esco.html","about":"about.html",
     "news":"news.html","library":"library.html","quote":"quote.html",
 }
 VER = "0"
@@ -294,7 +560,7 @@ def head(title, desc, path, page, extra_ld=None, keywords=""):
       "address":{"@type":"PostalAddress","streetAddress":"동탄광역환승로73",
                  "addressLocality":"화성시","addressRegion":"경기도","addressCountry":"KR"},
       "taxID":"214-88-51839",
-      "description":"디지털미디어·헬스케어·유통 세 사업부로 검증된 결과를 만드는 회사."
+      "description":"디지털미디어·헬스케어·유통·에너지(ESCO) 네 사업부로 검증된 결과를 만드는 회사."
     }
     ld = '<script type="application/ld+json">%s</script>' % json.dumps(org_ld, ensure_ascii=False)
     if extra_ld:
@@ -353,13 +619,14 @@ def header(active=""):
     menu = "".join([
         nav("nav.business","business"),
         nav("nav.portfolio","portfolio"),
+        nav("nav.esco","esco"),
         nav("nav.about","about"),
         nav("nav.news","news"),
         nav("nav.library","library"),
     ])
     return """<div class="topstrip">
   <div class="wrap">
-    <span class="ts-main">HOW INTERNATIONAL<span class="ts-sub"> — 디지털미디어 × 헬스케어 × 유통</span></span>
+    <span class="ts-main">HOW INTERNATIONAL<span class="ts-sub"> — 디지털미디어 × 헬스케어 × 유통 × 에너지</span></span>
     <span class="loc">Hwaseong · Republic of Korea</span>
   </div>
 </div>
@@ -367,7 +634,7 @@ def header(active=""):
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="하우인터내셔널 홈">
       <img src="assets/how-logo.png" alt="HOW International" width="120" height="24">
-      <span class="lbl">Global Distribution<br>Healthcare · Digital Media</span>
+      <span class="lbl">Global Distribution · Energy<br>Healthcare · Digital Media</span>
     </a>
     <button class="burger" aria-label="메뉴 열기" aria-expanded="false"><span></span></button>
     <nav class="menu" aria-label="주요 메뉴">
@@ -390,12 +657,12 @@ def footer():
     <div class="fgrid">
       <div class="fbrand">
         <span class="flogo-badge"><img src="assets/how-logo.png" alt="HOW International"></span>
-        <div class="ft">Global Distribution<br>Healthcare · Digital Media</div>
+        <div class="ft">Global Distribution · Energy<br>Healthcare · Digital Media</div>
         <p class="tagline">{tag}</p>
       </div>
       <div class="fcol">
         <h5>{sitemap}</h5>
-        <div class="flist">{s_biz}{s_pf}{s_about}{s_news}{s_quote}</div>
+        <div class="flist">{s_biz}{s_pf}{s_esco}{s_about}{s_news}{s_quote}</div>
       </div>
       <div class="fcol">
         <h5>{brands}</h5>
@@ -433,6 +700,7 @@ def footer():
         ver=VER,
         tag=S("foot.tagline"), sitemap=T["foot.sitemap"][0], brands=T["foot.brands"][0], company=T["foot.company"][0],
         s_biz=flink("nav.business","business"), s_pf=flink("nav.portfolio","portfolio"),
+        s_esco=flink("nav.esco","esco"),
         s_about=flink("nav.about","about"), s_news=flink("nav.news","news"),
         s_quote=flink("foot.quote","quote"),
         name_a=w("foot.name")[0], name_ko=T["foot.name"][0],
@@ -535,7 +803,7 @@ def home():
         <div>{eye}<h2 class="rv d1">{h2}</h2></div>
         <p class="note rv d2">{note}</p>
       </div>
-      <div class="ovgrid three">
+      <div class="ovgrid four">
         <div class="ovcard rv d1">
           <span class="no">{d1no}</span>
           <h3>{d1t}</h3><div class="lt">{d1lt}</div>
@@ -557,6 +825,13 @@ def home():
           {d3list}
           <a class="golink" href="business.html">{d3go}</a>
         </div>
+        <div class="ovcard rv d4">
+          <span class="no">{d4no}</span>
+          <h3>{d4t}</h3><div class="lt">{d4lt}</div>
+          <p>{d4p}</p>
+          {d4list}
+          <a class="golink" href="esco.html">{d4go}</a>
+        </div>
       </div>
     </div>
   </section>""".format(
@@ -566,7 +841,9 @@ def home():
         d2no=S("ov.d2.no"), d2t=S("ov.d2.t"), d2lt=S("ov.d2.lt"),
         d2p=S("ov.d2.p"), d2list=dashlist(["ov.d2.li1"]), d2go=S("ov.d2.go"),
         d3no=S("ov.d3.no"), d3t=S("ov.d3.t"), d3lt=S("ov.d3.lt"),
-        d3p=S("ov.d3.p"), d3list=dashlist(["ov.d3.li1"]), d3go=S("ov.d3.go"))
+        d3p=S("ov.d3.p"), d3list=dashlist(["ov.d3.li1"]), d3go=S("ov.d3.go"),
+        d4no=S("ov.d4.no"), d4t=S("ov.d4.t"), d4lt=S("ov.d4.lt"),
+        d4p=S("ov.d4.p"), d4list=dashlist(["ov.d4.li1"]), d4go=S("ov.d4.go"))
 
     standards = """<section class="pad s96 standards">
     <div class="wrap">
@@ -609,15 +886,15 @@ def home():
         "address":{"@type":"PostalAddress","streetAddress":"동탄광역환승로73",
                    "addressLocality":"화성시","addressRegion":"경기도","addressCountry":"KR"},
         "taxID":"214-88-51839",
-        "description":"디지털미디어·헬스케어·유통 세 사업부로 검증된 결과를 만드는 회사."
+        "description":"디지털미디어·헬스케어·유통·에너지(ESCO) 네 사업부로 검증된 결과를 만드는 회사."
     }, ensure_ascii=False)
     website = json.dumps({"@context":"https://schema.org","@type":"WebSite","name":"하우인터내셔널","url":DOMAIN}, ensure_ascii=False)
     return head(
-        "하우인터내셔널 — 유통 · 헬스케어 · 디지털미디어",
-        "하우인터내셔널은 디지털미디어(웹사이트개발·앱개발), 헬스케어 의료기기, 유통 세 사업부로 검증된 결과를 만드는 회사입니다.",
+        "하우인터내셔널 — 유통 · 헬스케어 · 디지털미디어 · 에너지(ESCO)",
+        "하우인터내셔널은 디지털미디어(웹사이트개발·앱개발), 헬스케어 의료기기, 유통, 에너지(조명 ESCO) 네 사업부로 검증된 결과를 만드는 회사입니다.",
         "/index.html","home",
         extra_ld=[website, local_biz],
-        keywords="하우인터내셔널,웹사이트개발,웹사이트제작,홈페이지제작,앱개발,플랫폼개발,디지털미디어사업부,헬스케어사업부,유통사업부,견적상담"
+        keywords="하우인터내셔널,웹사이트개발,웹사이트제작,홈페이지제작,앱개발,플랫폼개발,디지털미디어사업부,헬스케어사업부,유통사업부,에너지사업부,ESCO,조명ESCO,견적상담"
     ) + body + footer()
 
 def business():
@@ -678,14 +955,27 @@ def business():
       <div class="scards">{dist}</div>
     </div>
   </section>
+  <section class="pad s96" data-bg="mist">
+    <div class="wrap sectlabel">
+      {d4eye}
+      <h2 class="rv small">{d4h2}</h2>
+      <p class="sublead rv">{d4lead}</p>
+      <div class="biz-d4-cta rv">
+        <a class="btn blue" href="esco.html">{d4go1}</a>
+        <a class="btn ghost" href="esco.html#apply">{d4go2}</a>
+      </div>
+    </div>
+  </section>
   {channels}
-  <div class="seo-kw wrap">#사업분야 #유통사업부 #헬스케어사업부 #디지털미디어사업부 #웹사이트개발 #앱개발</div>""".format(
+  <div class="seo-kw wrap">#사업분야 #유통사업부 #헬스케어사업부 #디지털미디어사업부 #에너지사업부 #ESCO #조명ESCO #웹사이트개발 #앱개발</div>""".format(
         d1eye=S("biz.d1.eye",cls="eyebrow rv"), d1h2=S("biz.d1.h2",html=True), d1lead=S("biz.d1.lead"),
         media=media_cards, pf_cta=portfolio_cta,
         d2eye=S("biz.d2.eye",cls="eyebrow rv"), d2h2=S("biz.d2.h2",html=True), d2lead=S("biz.d2.lead"),
         health=health_cards,
         d3eye=S("biz.d3.eye",cls="eyebrow rv"), d3h2=S("biz.d3.h2",html=True), d3lead=S("biz.d3.lead"),
         dist=dist_cards,
+        d4eye=S("biz.d4.eye",cls="eyebrow rv"), d4h2=S("biz.d4.h2",html=True), d4lead=S("biz.d4.lead"),
+        d4go1=S("biz.d4.go1"), d4go2=S("biz.d4.go2"),
         channels=channel_cards())
     biz_items = json.dumps({
         "@context":"https://schema.org","@type":"ItemList",
@@ -693,15 +983,16 @@ def business():
         "itemListElement":[
             {"@type":"ListItem","position":1,"item":{"@type":"Service","name":"디지털미디어사업부","description":"웹사이트·앱 플랫폼 개발 및 자체 플랫폼 운영","provider":{"@type":"Organization","name":"하우인터내셔널"}}},
             {"@type":"ListItem","position":2,"item":{"@type":"Service","name":"헬스케어사업부","description":"KFDA 허가 의료기기 Painfree 8800 공급","provider":{"@type":"Organization","name":"하우인터내셔널"}}},
-            {"@type":"ListItem","position":3,"item":{"@type":"Service","name":"유통사업부","description":"바이오타맥스(BiotaMax) 토양생균제 국내 총판","provider":{"@type":"Organization","name":"하우인터내셔널"}}}
+            {"@type":"ListItem","position":3,"item":{"@type":"Service","name":"유통사업부","description":"바이오타맥스(BiotaMax) 토양생균제 국내 총판","provider":{"@type":"Organization","name":"하우인터내셔널"}}},
+            {"@type":"ListItem","position":4,"item":{"@type":"Service","name":"에너지사업부","description":"초기비용 0원 조명 ESCO — 노후 조명을 3세대 스마트 AI LED로 교체, 절감액으로 상환","provider":{"@type":"Organization","name":"하우인터내셔널"}}}
         ]
     }, ensure_ascii=False)
     return head(
-        "사업분야 — 유통 · 헬스케어 · 디지털미디어 | 하우인터내셔널",
-        "하우인터내셔널의 유통사업부(바이오타맥스), 헬스케어사업부(Painfree 8800), 디지털미디어사업부(웹사이트개발·앱개발)를 소개합니다.",
+        "사업분야 — 유통 · 헬스케어 · 디지털미디어 · 에너지(ESCO) | 하우인터내셔널",
+        "하우인터내셔널의 유통사업부(바이오타맥스), 헬스케어사업부(Painfree 8800), 디지털미디어사업부(웹사이트개발·앱개발), 에너지사업부(조명 ESCO)를 소개합니다.",
         "/business.html","business",
         extra_ld=[breadcrumb_ld([("홈","index.html"),("사업분야","business.html")]), biz_items],
-        keywords="사업분야,유통사업부,헬스케어사업부,디지털미디어사업부,웹사이트개발,앱개발,바이오타맥스,Painfree8800"
+        keywords="사업분야,유통사업부,헬스케어사업부,디지털미디어사업부,에너지사업부,ESCO,조명ESCO,웹사이트개발,앱개발,바이오타맥스,Painfree8800"
     ) + body + footer()
 
 def portfolio():
@@ -831,7 +1122,12 @@ def quote():
               <label class="qtype-card" data-type="distribution"><input type="radio" name="qtype" value="distribution"> {t_dist}</label>
               <label class="qtype-card" data-type="healthcare"><input type="radio" name="qtype" value="healthcare"> {t_health}</label>
               <label class="qtype-card active" data-type="media"><input type="radio" name="qtype" value="media" checked> {t_media}</label>
+              <label class="qtype-card" data-type="esco"><input type="radio" name="qtype" value="esco"> {t_esco}</label>
               <label class="qtype-card" data-type="other"><input type="radio" name="qtype" value="other"> {t_other}</label>
+            </div>
+            <div class="qesco-note" id="qesco-note" style="display:none">
+              <p {en_a}>{esco_note}</p>
+              <a class="go" href="esco.html#apply">{esco_go}</a>
             </div>
           </div>
           <div class="quote-fields" id="quote-fields">
@@ -883,7 +1179,8 @@ def quote():
           <p class="formnote" {fn_a} data-i18n-html>{fn}</p>
         </form>""".format(
         type_lbl=S("qt.type.label"), t_dist=S("qt.type.dist"), t_health=S("qt.type.health"),
-        t_media=S("qt.type.media"), t_other=S("qt.type.other"),
+        t_media=S("qt.type.media"), t_esco=S("qt.type.esco"), t_other=S("qt.type.other"),
+        en_a=w("qt.esco.note")[0], esco_note=T["qt.esco.note"][0], esco_go=S("qt.esco.go"),
         ql=S("qt.quote.label"),
         budget_l=S("qt.budget"), projtype_l=S("qt.projtype"),
         sched_l=S("qt.schedule"), sched_ph='data-i18n-ph="qt.schedule.ph" placeholder="%s"' % T["qt.schedule.ph"][0],
@@ -997,7 +1294,7 @@ def about():
         "address":{"@type":"PostalAddress","streetAddress":"동탄광역환승로73",
                    "addressLocality":"화성시","addressRegion":"경기도","addressCountry":"KR"},
         "foundingLocation":{"@type":"Place","name":"화성시, 경기도, 대한민국"},
-        "knowsAbout":["디지털미디어","웹사이트개발","앱개발","헬스케어","의료기기","유통","토양생균제"]
+        "knowsAbout":["디지털미디어","웹사이트개발","앱개발","헬스케어","의료기기","유통","토양생균제","에너지효율화","ESCO","조명 ESCO","LED 교체사업"]
     }, ensure_ascii=False)
     return head(
         "회사소개 | 하우인터내셔널",
@@ -1025,6 +1322,304 @@ def listpage(kind):
         extra_ld=[breadcrumb_ld([("홈","index.html"),(crumb_name,path.lstrip("/"))])],
         keywords=kw) + body + footer()
 
+# ---------------------------------------------------------------- esco page
+ESCO_TARGETS = ["apartment","parking","factory","hospital","building","retail",
+                "public","university","school","church","welfare"]
+ESCO_SLOW = {"school","church","welfare"}
+ESCO_SPEED = {"apartment":"esco.spd.fast","parking":"esco.spd.vfast","factory":"esco.spd.vfast",
+              "hospital":"esco.spd.fast","building":"esco.spd.normal","retail":"esco.spd.normal",
+              "public":"esco.spd.normal","university":"esco.spd.normal","school":"esco.spd.slow",
+              "church":"esco.spd.slow","welfare":"esco.spd.slow"}
+
+def esco():
+    def opt(key):
+        a, ko = w(key); return '<option value="%s" %s>%s</option>' % (ko, a, ko)
+    def fopt(key, val):
+        a, ko = w(key); return '<option value="%s" %s>%s</option>' % (val, a, ko)
+
+    # --- hero ---
+    crumb = '<a href="index.html">HOME</a> / %s' % S("esco.crumb")
+    hero = """<section class="esco-hero">
+    <div class="wrap">
+      <div class="crumb rv">{crumb}</div>
+      <span class="eyebrow light rv">{eye}</span>
+      <h1 class="rv d1">{h1}</h1>
+      <p class="esco-lead rv d2">{lead}</p>
+      <div class="esco-kpis rv d3">
+        <div class="esco-kpi"><span class="n">{k1n}</span><span class="l">{k1l}</span></div>
+        <div class="esco-kpi"><span class="n">{k2n}</span><span class="l">{k2l}</span></div>
+        <div class="esco-kpi"><span class="n">{k3n}</span><span class="l">{k3l}</span></div>
+      </div>
+      <div class="cta rv d4">
+        <a class="btn blue" href="#apply">{apply}</a>
+        <a class="btn ghost" href="#calc">{calc}</a>
+      </div>
+    </div>
+  </section>""".format(
+        crumb=crumb, eye=T["esco.eyebrow"][0], h1=S("esco.h1",tag="span",html=True), lead=S("esco.lead"),
+        k1n=S("esco.kpi1.n"), k1l=S("esco.kpi1.l"), k2n=S("esco.kpi2.n"), k2l=S("esco.kpi2.l"),
+        k3n=S("esco.kpi3.n"), k3l=S("esco.kpi3.l"),
+        apply=S("esco.cta.apply"), calc=S("esco.cta.calc"))
+
+    # --- what is esco ---
+    flow = "".join('<div class="esco-step rv"><h4>%s</h4><p>%s</p></div>'
+                   % (S("esco.flow%d.t"%i), S("esco.flow%d.p"%i)) for i in (1,2,3,4))
+    cmp_rows = "".join('<tr><th>%s</th><td>%s</td><td class="hi">%s</td></tr>'
+                       % (S("esco.cmp.r%d"%i), S("esco.cmp.r%da"%i), S("esco.cmp.r%db"%i)) for i in (1,2,3,4))
+    what = """<section class="pad s96">
+    <div class="wrap sectlabel">
+      {eye}
+      <h2 class="rv small">{h2}</h2>
+      <p class="sublead rv">{p}</p>
+      <div class="esco-flow rv">{flow}</div>
+      <div class="esco-tablewrap rv">
+        <table class="esco-table cmp">
+          <thead><tr><th>{c0}</th><th>{c1}</th><th class="hi">{c2}</th></tr></thead>
+          <tbody>{rows}</tbody>
+        </table>
+      </div>
+    </div>
+  </section>""".format(
+        eye=S("esco.what.eye",cls="eyebrow rv"), h2=S("esco.what.h2",html=True), p=S("esco.what.p"),
+        flow=flow, c0=S("esco.cmp.c0"), c1=S("esco.cmp.c1"), c2=S("esco.cmp.c2"), rows=cmp_rows)
+
+    # --- 3rd-gen LED ---
+    led_feats = "".join('<div class="esco-feat rv"><h4>%s</h4><p>%s</p></div>'
+                        % (S("esco.led.f%d"%i), S("esco.led.f%dp"%i)) for i in (1,2,3))
+    led = """<section class="pad s96" data-bg="mist">
+    <div class="wrap sectlabel">
+      {eye}
+      <h2 class="rv small">{h2}</h2>
+      <div class="esco-tablewrap rv">
+        <table class="esco-table led">
+          <thead><tr><th>{c0}</th><th>{c1}</th><th>{c2}</th><th class="hi">{c3}</th></tr></thead>
+          <tbody>
+            <tr><th>{r1}</th><td>60 lm</td><td>110 lm</td><td class="hi">{r1c}</td></tr>
+            <tr><th>{r2}</th><td>{r2a}</td><td>{r2b}</td><td class="hi">{r2c}</td></tr>
+            <tr><th>{r3}</th><td>{r3a}</td><td>{r3b}</td><td class="hi">{r3c}</td></tr>
+            <tr><th>{r4}</th><td>{r4ab}</td><td>{r4ab2}</td><td class="hi">{r4c}</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="esco-feats rv">{feats}</div>
+    </div>
+  </section>""".format(
+        eye=S("esco.led.eye",cls="eyebrow rv"), h2=S("esco.led.h2",html=True),
+        c0=S("esco.led.c0"), c1=S("esco.led.c1"), c2=S("esco.led.c2"), c3=S("esco.led.c3"),
+        r1=S("esco.led.r1"), r1c=S("esco.led.r1c"),
+        r2=S("esco.led.r2"), r2a=S("esco.led.r2a"), r2b=S("esco.led.r2b"), r2c=S("esco.led.r2c"),
+        r3=S("esco.led.r3"), r3a=S("esco.led.r3a"), r3b=S("esco.led.r3b"), r3c=S("esco.led.r3c"),
+        r4=S("esco.led.r4"), r4ab=S("esco.led.r4ab"), r4ab2=S("esco.led.r4ab"), r4c=S("esco.led.r4c"),
+        feats=led_feats)
+
+    # --- targets (11 details) ---
+    def target_card(k):
+        slownote = ('<p class="esco-slownote">%s</p>' % S("esco.tg.slownote")) if k in ESCO_SLOW else ""
+        return """<details class="esco-target rv">
+          <summary><span class="et-name">{n}</span><span class="et-rate"><em>{rl}</em> {r}</span></summary>
+          <div class="et-body">
+            <p>{s}</p>
+            <div class="et-meta"><span class="et-speed"><em>{sl}</em> {sp}</span></div>
+            {slow}
+            <a class="go" href="esco.html?facility={k}#apply">{btn}</a>
+          </div>
+        </details>""".format(
+            n=S("esco.tg.%s.n"%k), rl=S("esco.tg.ratelbl"), r=S("esco.tg.%s.r"%k),
+            s=S("esco.tg.%s.s"%k), sl=S("esco.tg.speedlbl"), sp=S(ESCO_SPEED[k]),
+            slow=slownote, k=k, btn=S("esco.tg.btn"))
+    targets = """<section class="pad s96">
+    <div class="wrap sectlabel">
+      {eye}
+      <h2 class="rv small">{h2}</h2>
+      <div class="esco-targets">{cards}</div>
+    </div>
+  </section>""".format(
+        eye=S("esco.tg.eye",cls="eyebrow rv"), h2=S("esco.tg.h2",html=True),
+        cards="".join(target_card(k) for k in ESCO_TARGETS))
+
+    # --- calculator ---
+    calc_fopts = "".join(fopt("esco.tg.%s.n"%k, k) for k in ESCO_TARGETS)
+    calc = """<section class="pad s96" data-bg="blue" id="calc">
+    <div class="wrap sectlabel">
+      {eye}
+      <h2 class="rv small">{h2}</h2>
+      <div class="esco-calc rv">
+        <div class="esco-calc-in">
+          <div class="field">
+            <label data-i18n="esco.calc.flbl">{flbl}</label>
+            <select id="calc-facility">{opts}</select>
+          </div>
+          <div class="field">
+            <label id="calc-bill-label" data-i18n="esco.calc.blbl">{blbl}</label>
+            <input id="calc-bill" type="text" inputmode="numeric" data-i18n-ph="esco.calc.bph" placeholder="{bph}">
+          </div>
+          <button class="btn blue" id="calc-run" type="button">{btn}</button>
+        </div>
+        <div class="esco-calc-out" id="calc-out" style="display:none">
+          <div class="esco-calc-result"><span class="pre" data-i18n="esco.calc.resultpre">{pre}</span>
+            <strong id="calc-amount"></strong></div>
+          <a class="btn ghost" id="calc-apply" href="#apply">{applybtn}</a>
+          <p class="esco-disclaimer">{disc}</p>
+        </div>
+      </div>
+    </div>
+  </section>""".format(
+        eye=S("esco.calc.eye",cls="eyebrow light rv"), h2=S("esco.calc.h2",html=True),
+        flbl=T["esco.calc.flbl"][0], opts=calc_fopts,
+        blbl=T["esco.calc.blbl"][0], bph=T["esco.calc.bph"][0],
+        btn=S("esco.calc.btn"), pre=T["esco.calc.resultpre"][0],
+        applybtn=S("esco.calc.applybtn"), disc=S("esco.calc.disclaimer"))
+
+    # --- cases ---
+    case_rows = "".join('<tr><th>%s</th><td>%s</td><td class="hi">%s</td></tr>'
+                        % (S("esco.case.r%ds"%i), S("esco.case.r%dc"%i), S("esco.case.r%dr"%i)) for i in (1,2,3,4))
+    cases = """<section class="pad s96">
+    <div class="wrap sectlabel">
+      {eye}
+      <h2 class="rv small">{h2}</h2>
+      <div class="esco-tablewrap rv">
+        <table class="esco-table cases">
+          <thead><tr><th>{c0}</th><th>{c1}</th><th class="hi">{c2}</th></tr></thead>
+          <tbody>{rows}</tbody>
+        </table>
+      </div>
+    </div>
+  </section>""".format(
+        eye=S("esco.case.eye",cls="eyebrow rv"), h2=S("esco.case.h2",html=True),
+        c0=S("esco.case.c0"), c1=S("esco.case.c1"), c2=S("esco.case.c2"), rows=case_rows)
+
+    # --- structure ---
+    roles = "".join('<div class="esco-role rv"><h4>%s</h4><p>%s</p></div>'
+                    % (S("esco.str.%s.t"%r), S("esco.str.%s.p"%r)) for r in ("user","esco","epc"))
+    steps = "".join('<li class="rv">%s</li>' % S("esco.str.step%d"%i) for i in range(1,8))
+    structure = """<section class="pad s96" data-bg="mist">
+    <div class="wrap sectlabel">
+      {eye}
+      <h2 class="rv small">{h2}</h2>
+      <div class="esco-roles">{roles}</div>
+      <div class="esco-how rv"><h4>{how_t}</h4><p>{how_p}</p></div>
+      <div class="esco-steps-wrap rv">
+        <div class="esco-steps-label">{stepsl}</div>
+        <ol class="esco-steps">{steps}</ol>
+      </div>
+    </div>
+  </section>""".format(
+        eye=S("esco.str.eye",cls="eyebrow rv"), h2=S("esco.str.h2",html=True),
+        roles=roles, how_t=S("esco.str.how.t"), how_p=S("esco.str.how.p"),
+        stepsl=S("esco.str.steps.l"), steps=steps)
+
+    # --- faq ---
+    faq_items = "".join("""<details class="esco-faq rv">
+          <summary>{q}</summary><div class="esco-faq-a"><p>{a}</p></div>
+        </details>""".format(q=S("esco.faq.q%d"%i), a=S("esco.faq.a%d"%i)) for i in range(1,8))
+    faq = """<section class="pad s96" id="faq">
+    <div class="wrap sectlabel">
+      {eye}
+      <h2 class="rv small">{h2}</h2>
+      <div class="esco-faqs">{items}</div>
+    </div>
+  </section>""".format(
+        eye=S("esco.faq.eye",cls="eyebrow rv"), h2=S("esco.faq.h2",html=True), items=faq_items)
+
+    # --- apply form ---
+    facility_opts = ('<option value="" disabled selected %s>%s</option>'
+                     % (w("esco.f.role.0")[0], T["esco.f.role.0"][0])) \
+                    + "".join(fopt("esco.tg.%s.n"%k, k) for k in ESCO_TARGETS) \
+                    + fopt("esco.f.other","other")
+    bill_opts = "".join(opt("esco.f.bill.%d"%i) for i in range(0,5))
+    role_opts = ('<option value="" selected %s>%s</option>' % (w("esco.f.role.0")[0], T["esco.f.role.0"][0])) \
+                + "".join(opt("esco.f.role.%d"%i) for i in range(1,6))
+    ctime_opts = "".join(opt("esco.f.ctime.%d"%i) for i in range(0,3))
+    apply_form = """<form id="esco-form" class="esco-form rv" novalidate>
+          <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <div class="two">
+            <div class="field"><label>{facility_l} <span class="req">*</span></label>
+              <select name="facility" id="esco-facility" required>{facility_opts}</select></div>
+            <div class="field"><label>{fname_l} <span class="req">*</span></label>
+              <input name="facility_name" required data-i18n-ph="esco.f.fname.ph" placeholder="{fname_ph}"></div>
+          </div>
+          <div class="two">
+            <div class="field"><label>{region_l} <span class="req">*</span></label>
+              <input name="region" required data-i18n-ph="esco.f.region.ph" placeholder="{region_ph}"></div>
+            <div class="field"><label>{scale_l}</label>
+              <input name="scale" data-i18n-ph="esco.f.scale.ph" placeholder="{scale_ph}"></div>
+          </div>
+          <div class="two">
+            <div class="field"><label>{bill_l}</label><select name="monthly_bill">{bill_opts}</select></div>
+            <div class="field"><label>{role_l}</label><select name="role">{role_opts}</select></div>
+          </div>
+          <div class="two">
+            <div class="field"><label>{name_l} <span class="req">*</span></label>
+              <input name="name" required data-i18n-ph="esco.f.name.ph" placeholder="{name_ph}"></div>
+            <div class="field"><label>{phone_l} <span class="req">*</span></label>
+              <input name="phone" type="tel" required data-i18n-ph="esco.f.phone.ph" placeholder="{phone_ph}"></div>
+          </div>
+          <div class="two">
+            <div class="field"><label>{email_l} <span class="req">*</span></label>
+              <input name="email" type="email" required data-i18n-ph="esco.f.email.ph" placeholder="{email_ph}"></div>
+            <div class="field"><label>{ctime_l}</label><select name="contact_time">{ctime_opts}</select></div>
+          </div>
+          <div class="field"><label>{note_l}</label>
+            <textarea name="note" maxlength="2000" data-i18n-ph="esco.f.note.ph" placeholder="{note_ph}"></textarea></div>
+          <label class="consent"><input type="checkbox" name="consent" required> {consent}</label>
+          <button class="btn blue lg" type="submit">{submit}</button>
+          <p class="formnote" {fn_a} data-i18n-html>{fn}</p>
+        </form>""".format(
+        facility_l=S("esco.f.facility"), facility_opts=facility_opts,
+        fname_l=S("esco.f.fname"), fname_ph=T["esco.f.fname.ph"][0],
+        region_l=S("esco.f.region"), region_ph=T["esco.f.region.ph"][0],
+        scale_l=S("esco.f.scale"), scale_ph=T["esco.f.scale.ph"][0],
+        bill_l=S("esco.f.bill"), bill_opts=bill_opts,
+        role_l=S("esco.f.role"), role_opts=role_opts,
+        name_l=S("esco.f.name"), name_ph=T["esco.f.name.ph"][0],
+        phone_l=S("esco.f.phone"), phone_ph=T["esco.f.phone.ph"][0],
+        email_l=S("esco.f.email"), email_ph=T["esco.f.email.ph"][0],
+        ctime_l=S("esco.f.ctime"), ctime_opts=ctime_opts,
+        note_l=S("esco.f.note"), note_ph=T["esco.f.note.ph"][0],
+        consent=S("esco.f.consent"), submit=S("esco.f.submit"),
+        fn_a=w("esco.f.formnote",True)[0], fn=T["esco.f.formnote"][0])
+    apply_section = """<section class="pad s96" data-bg="line" id="apply">
+    <div class="wrap sectlabel">
+      {eye}
+      <h2 class="rv small">{h2}</h2>
+      <div id="esco-success" class="quote-success" style="display:none">
+        <div class="success-tag">{dtag}</div>
+        <h2>{dh}</h2>
+        <p>{dp}</p>
+        <button class="btn" id="esco-reset">{dreset}</button>
+      </div>
+      {form}
+    </div>
+  </section>""".format(
+        eye=S("esco.apply.eye",cls="eyebrow rv"), h2=S("esco.apply.h2",html=True),
+        dtag=S("esco.done.tag"), dh=S("esco.done.h"), dp=S("esco.done.p"), dreset=S("esco.done.reset"),
+        form=apply_form)
+
+    seo_row = '<div class="seo-kw wrap">#ESCO #조명ESCO #에너지절약전문기업 #LED교체 #전기요금절감 #무료진단 #아파트조명 #주차장조명 #공장조명</div>'
+    body = (header("esco") + "<main>" + hero + what + led + targets + calc + cases
+            + structure + faq + apply_section + "</main>" + seo_row)
+
+    service_ld = json.dumps({
+        "@context":"https://schema.org","@type":"Service",
+        "serviceType":"조명 ESCO (에너지절약전문기업) 사업",
+        "name":"조명 ESCO 무료 절감 진단","url":DOMAIN+"/esco.html",
+        "provider":{"@type":"Organization","name":"하우인터내셔널","url":DOMAIN},
+        "areaServed":{"@type":"Country","name":"대한민국"},
+        "description":"초기비용 0원으로 노후 조명을 3세대 스마트 AI LED로 교체하고 절감된 전기요금으로 상환하는 조명 ESCO 사업. 무료 절감 진단 제공."
+    }, ensure_ascii=False)
+    faq_ld = json.dumps({
+        "@context":"https://schema.org","@type":"FAQPage",
+        "mainEntity":[{"@type":"Question","name":T["esco.faq.q%d"%i][0],
+                       "acceptedAnswer":{"@type":"Answer","text":T["esco.faq.a%d"%i][0]}} for i in range(1,8)]
+    }, ensure_ascii=False)
+    return head(
+        "조명 ESCO — 초기비용 0원 LED 교체 · 무료 절감 진단 | 하우인터내셔널",
+        "초기비용 0원으로 노후 조명을 3세대 스마트 AI LED로 바꾸고 절감된 전기요금으로 상환하는 조명 ESCO. 아파트·주차장·공장·병원 등 무료 절감 진단을 신청하세요.",
+        "/esco.html","esco",
+        extra_ld=[breadcrumb_ld([("홈","index.html"),("ESCO","esco.html")]), service_ld, faq_ld],
+        keywords="ESCO,조명ESCO,에너지절약전문기업,LED교체,전기요금절감,무료진단,아파트조명,주차장조명,공장조명,에너지효율화,하우인터내셔널"
+    ) + body + footer()
+
 # ---------------------------------------------------------------- write i18n.js
 def write_i18n():
     d = {k:{"ko":v[0],"en":v[1]} for k,v in T.items()}
@@ -1035,11 +1630,11 @@ def write_i18n():
 def seo_and_config():
     import datetime
     today = datetime.date.today().isoformat()
-    freq = {"index.html":"weekly","business.html":"monthly","portfolio.html":"monthly",
+    freq = {"index.html":"weekly","business.html":"monthly","portfolio.html":"monthly","esco.html":"monthly",
             "about.html":"yearly","news.html":"daily","library.html":"weekly","quote.html":"monthly"}
-    pri  = {"index.html":"1.0","business.html":"0.9","portfolio.html":"0.8",
+    pri  = {"index.html":"1.0","business.html":"0.9","portfolio.html":"0.8","esco.html":"0.9",
             "about.html":"0.7","news.html":"0.8","library.html":"0.7","quote.html":"0.8"}
-    pages = ["index.html","business.html","portfolio.html","about.html","news.html","library.html","quote.html"]
+    pages = ["index.html","business.html","portfolio.html","esco.html","about.html","news.html","library.html","quote.html"]
     urls = "".join(
         '  <url><loc>%s/%s</loc><lastmod>%s</lastmod><changefreq>%s</changefreq><priority>%s</priority></url>\n'
         % (DOMAIN, p, today, freq.get(p,"monthly"), pri.get(p,"0.7"))
@@ -1062,6 +1657,7 @@ def main():
         "about.html":about(),
         "business.html":business(),
         "portfolio.html":portfolio(),
+        "esco.html":esco(),
         "quote.html":quote(),
         "news.html":listpage("news"),
         "library.html":listpage("library"),

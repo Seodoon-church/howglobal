@@ -33,13 +33,17 @@
   - Painfree 8800 — KFDA Class III 6-in-1 통증치료 의료기기(제조 GM R&D) · https://painfree8800.com
 - **유통사업부 (DIV. 03)**
   - 바이오타맥스(BiotaMax) — 미국 직수입 토양생균제, 10종 유익 토양미생물 · https://biotamax.co.kr
+- **에너지사업부 (DIV. 04) — 조명 ESCO**
+  - 초기비용 0원으로 노후 조명을 3세대 스마트 AI LED로 교체하고 절감된 전기요금으로 상환하는 ESCO 사업. 하우인터내셔널은 **제안·사업 총괄**(상담 창구, 무료 진단 연결, 계약~준공 관리).
+  - 파트너: 켑코이에스㈜(에너지효율화사업자·금융·성과보증), ㈜투반산업(EPC·3세대 AI LED 제조·시공·하자보증 60개월)
+  - 페이지: `/esco.html` — 무료 절감 진단 신청(Firestore `inquiries`, `type:"esco"`). 영업 1순위: 아파트. 제안서 PDF는 비공개(신청자 개별 발송).
 
 ## 브랜드 토큰 (styles.css의 :root)
 - 블루(강조 전용): `#0000FF` / blue-ink `#0D1BD1`
 - 잉크 `#0A0C14` · 보조 `#20242F` · muted `#6A707E`
 - 화이트 `#FFFFFF` · 미스트 `#F4F5F8` · 블루워시 `#EEF0FF` · 라인 `#E4E6EC`
 - 폰트: **Pretendard**(국문/본문) · **Space Grotesk**(라틴 디스플레이) · **Space Mono**(스펙 라벨)
-- 톤: 블루는 **포인트로만**. 편집형 카탈로그 + 모노 스펙 라벨(3-디비전: 유통 · 헬스케어 · 디지털미디어).
+- 톤: 블루는 **포인트로만**. 편집형 카탈로그 + 모노 스펙 라벨(4-디비전: 유통 · 헬스케어 · 디지털미디어 · 에너지).
 
 ## 저장소 구조
 ```
@@ -89,7 +93,8 @@ npm run deploy:rules   # firestore/storage 규칙만
 - SEO 심화가 필요하면 영문 `/en/` 별도 URL 생성이 다음 옵션(`docs/TASKS.md`).
 
 ## Firestore 데이터 모델
-- `inquiries` — 협력 문의: `type`(distribution|software), `name`, `company`, `email`, `phone`, `message`, `consent`, `createdAt`. 생성 공개, 열람 관리자.
+- `inquiries` — 협력 문의: `type`(distribution|healthcare|media|esco|other), `name`, `company`, `email`, `phone`, `message`, `consent`, `createdAt`. 생성 공개, 열람 관리자.
+  - `type:"esco"`는 추가 필드: `facility`(시설 유형 영문 key), `facility_name`, `region`, `scale`, `monthly_bill`, `role`, `contact_time`, `note`, `calc`({monthly_bill_input, est_low, est_high} | null), `lang`, `page`. `message`는 app.js가 자동 생성(규칙상 필수). 어드민(admin.html)에서 ESCO 필터·시설 상세 표시.
 - `news` — 뉴스: `title_ko/en`, `cat_ko/en`, `excerpt_ko/en`, `date`, `link`, `published`. 열람 공개, 작성 관리자.
 - `library` — 자료실: `title_ko/en`, `desc_ko/en`, `type`, `size`, `file`(Storage 다운로드 URL). 열람 공개, 작성 관리자.
 - `visits` — 방문 로그: `path`, `referrer`, `lang`, `ua`, `at`. 생성 공개(익명), 열람 관리자.
@@ -101,7 +106,7 @@ npm run deploy:rules   # firestore/storage 규칙만
 - SDK는 gstatic CDN 모듈을 동적 import(번들러 불필요).
 
 ## 현재 상태 / 다음 작업
-- **완료**: 공개 사이트 6페이지(국/영·SEO), Firebase 설정·규칙, firebase.js 통합, admin 스캐폴드.
+- **완료**: 공개 사이트 7페이지(국/영·SEO, ESCO 포함), Firebase 설정·규칙, firebase.js 통합, admin 스캐폴드(+ESCO 필터).
 - **다음(우선순위)**: `docs/TASKS.md` 참고
   1. Firebase 프로젝트 생성 + `firebase-config.js` 채우기 → 문의 저장/방문로그 실활성
   2. 어드민 완성: 뉴스 CRUD · 자료실 CRUD(Storage 업로드) · 방문 통계

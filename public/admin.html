@@ -29,6 +29,16 @@
   .todo .mono{display:block;font-size:.72rem;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
   .hint{font-size:.8rem;color:var(--muted);margin-top:8px}
   .banner{background:var(--blue-wash);border:1px solid var(--line);padding:12px 16px;font-size:.85rem;color:var(--ink-2);margin-bottom:20px}
+  .ibar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+  .ibar button{font-family:var(--kr);font-size:.86rem;font-weight:600;background:#fff;border:1px solid var(--line-strong);border-radius:2px;padding:8px 14px;cursor:pointer;color:var(--ink-2)}
+  .ibar button.on{border-color:var(--blue);background:var(--blue-wash);color:var(--blue-ink)}
+  .ibar .cnt{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:5px}
+  .card .badge.esco{color:#fff;background:var(--blue);border-color:var(--blue)}
+  .card a[href^="tel:"],.card a[href^="mailto:"]{color:var(--blue)}
+  .esco-admin{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+  .esco-admin div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:5px 0;font-size:.88rem}
+  .esco-admin dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .esco-admin dd{color:var(--ink-2)}
 </style>
 </head>
 <body data-page="admin">
@@ -67,6 +77,11 @@
   </div>
 
   <div class="panel on" id="panel-inbox">
+    <div class="ibar" id="inbox-filter">
+      <button data-filter="all" class="on">전체<span class="cnt" id="cnt-all"></span></button>
+      <button data-filter="esco">ESCO<span class="cnt" id="cnt-esco"></span></button>
+      <button data-filter="other">그 외<span class="cnt" id="cnt-other"></span></button>
+    </div>
     <div id="inbox-list"><div class="todo"><span class="mono">Inbox</span>불러오는 중…</div></div>
   </div>
 
@@ -140,25 +155,75 @@
       if(on) loadInbox();
     });
 
-    // 문의함 조회 (기본 구현 — 참고용 패턴)
+    // 문의 유형 / 시설 라벨
+    const TYPE_LABELS = {software:'개발 의뢰', media:'미디어 개발·견적', distribution:'유통 제휴',
+                         healthcare:'헬스케어 제휴', esco:'ESCO 진단', other:'기타'};
+    const FACILITY_LABELS = {apartment:'아파트', parking:'주차장·주차빌딩', factory:'공장·물류센터',
+                             hospital:'병원·요양시설', building:'일반빌딩', retail:'대형마트·판매시설',
+                             public:'지자체·공공기관', university:'대학교', school:'학교·유치원',
+                             church:'교회·종교시설', welfare:'사회복지시설', other:'기타'};
+    const esc = s => String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+    let inboxDocs = [];      // 최근 50건(클라이언트 보관)
+    let inboxFilter = 'all'; // all | esco | other
+
+    // 필터 버튼
+    document.querySelectorAll('#inbox-filter button').forEach(b=>b.addEventListener('click',()=>{
+      inboxFilter = b.dataset.filter;
+      document.querySelectorAll('#inbox-filter button').forEach(x=>x.classList.toggle('on',x===b));
+      renderInbox();
+    }));
+
+    function cardHtml(x){
+      const type = TYPE_LABELS[x.type] || x.type || '문의';
+      const isEsco = x.type==='esco';
+      const when = x.createdAt?.toDate ? x.createdAt.toDate().toLocaleString('ko-KR') : '';
+      const phone = esc(x.phone||'');
+      const phoneHtml = phone ? `<a href="tel:${phone.replace(/[^0-9+]/g,'')}">${phone}</a>` : '-';
+      let extra = '';
+      if(isEsco){
+        const fac = FACILITY_LABELS[x.facility] || x.facility || '-';
+        const calc = x.calc ? `월 약 ${esc(x.calc.est_low)}~${esc(x.calc.est_high)}만원 (입력 ${Number(x.calc.monthly_bill_input||0).toLocaleString('ko-KR')}원)` : '';
+        extra = `<div class="esco-admin">
+          <div><dt>시설</dt><dd>${esc(fac)} · ${esc(x.facility_name||'-')} (${esc(x.region||'-')})</dd></div>
+          <div><dt>규모</dt><dd>${esc(x.scale||'-')}</dd></div>
+          <div><dt>월 전기요금</dt><dd>${esc(x.monthly_bill||'-')}</dd></div>
+          <div><dt>신청인</dt><dd>${esc(x.role||'-')} · 연락 가능 ${esc(x.contact_time||'-')}</dd></div>
+          ${calc?`<div><dt>계산기</dt><dd>${calc}</dd></div>`:''}
+        </div>`;
+      }
+      return `<div class="card">
+        <div class="meta"><span class="badge${isEsco?' esco':''}">${esc(type)}</span>${when}</div>
+        <h4>${esc(x.name)} · ${esc(x.company||x.facility_name||'-')}</h4>
+        <div class="meta"><a href="mailto:${esc(x.email)}">${esc(x.email)}</a> · ${phoneHtml}</div>
+        ${extra}
+        <p style="margin-top:10px;font-size:.94rem;white-space:pre-wrap">${esc(x.message)}</p>
+      </div>`;
+    }
+
+    function renderInbox(){
+      const host = $('#inbox-list');
+      const escoN = inboxDocs.filter(x=>x.type==='esco').length;
+      $('#cnt-all').textContent = `(${inboxDocs.length})`;
+      $('#cnt-esco').textContent = `(${escoN})`;
+      $('#cnt-other').textContent = `(${inboxDocs.length-escoN})`;
+      const rows = inboxDocs.filter(x=>{
+        if(inboxFilter==='esco') return x.type==='esco';
+        if(inboxFilter==='other') return x.type!=='esco';
+        return true;
+      });
+      if(!rows.length){ host.innerHTML = '<div class="todo"><span class="mono">Inbox</span>해당 조건의 문의가 없습니다.</div>'; return; }
+      host.innerHTML = rows.map(cardHtml).join('');
+    }
+
+    // 문의함 조회 (최근 50건 → 클라이언트 필터)
     async function loadInbox(){
       const host = $('#inbox-list');
       try{
         const q = fs.query(fs.collection(db,'inquiries'), fs.orderBy('createdAt','desc'), fs.limit(50));
         const snap = await fs.getDocs(q);
-        if(snap.empty){ host.innerHTML = '<div class="todo"><span class="mono">Inbox</span>접수된 문의가 없습니다.</div>'; return; }
-        host.innerHTML = snap.docs.map(d=>{
-          const x = d.data();
-          const type = x.type==='software' ? '개발 의뢰' : '유통 제휴';
-          const when = x.createdAt?.toDate ? x.createdAt.toDate().toLocaleString('ko-KR') : '';
-          const esc = s => String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-          return `<div class="card">
-            <div class="meta"><span class="badge">${type}</span>${when}</div>
-            <h4>${esc(x.name)} · ${esc(x.company||'-')}</h4>
-            <div class="meta">${esc(x.email)} · ${esc(x.phone||'-')}</div>
-            <p style="margin-top:10px;font-size:.94rem;white-space:pre-wrap">${esc(x.message)}</p>
-          </div>`;
-        }).join('');
+        inboxDocs = snap.docs.map(d=>d.data());
+        renderInbox();
       }catch(err){
         host.innerHTML = '<div class="todo"><span class="mono">오류</span>문의를 불러오지 못했습니다: '+(err.code||err.message)+'</div>';
       }

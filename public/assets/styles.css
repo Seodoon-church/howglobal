@@ -102,6 +102,9 @@ section.pad.s96{padding:96px 0}
 /* overview cards — 2 or 3 column */
 .ovgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .ovgrid.three{grid-template-columns:repeat(3,1fr)}
+.ovgrid.four{grid-template-columns:repeat(4,1fr)}
+.ovgrid.four .ovcard{padding:32px}
+.ovgrid.four .ovcard h3{font-size:1.4rem}
 .ovcard{border:1px solid var(--line);padding:40px;display:flex;flex-direction:column;background:#fff;transition:border-color .2s,box-shadow .2s}
 .ovcard:hover{border-color:var(--blue);box-shadow:0 24px 50px -30px rgba(0,0,255,.45)}
 .ovcard .no{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--blue)}
@@ -373,4 +376,118 @@ footer.site .wrap{padding:80px 32px 34px}
   *{scroll-behavior:auto!important}
   .rv{opacity:1;transform:none;transition:none}
   .ovcard,.scard,.pcard,.btn,.litem{transition:none}
+}
+
+/* ====================================================== ESCO (DIV.04) */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+/* hero */
+.esco-hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+.esco-hero .wrap{position:relative;padding:84px 32px 80px}
+.esco-hero .crumb{margin-bottom:22px}
+.esco-hero .eyebrow{margin-bottom:0}
+.esco-hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;letter-spacing:-.03em;margin:22px 0 0}
+.esco-lead{font-size:1.05rem;color:var(--dk-muted);margin:22px 0 0;max-width:62ch;line-height:1.8}
+.esco-kpis{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap}
+.esco-kpi{flex:1;min-width:150px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);padding:22px 24px;display:flex;flex-direction:column;gap:6px}
+.esco-kpi .n{font-family:var(--display);font-size:1.7rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+.esco-kpi .l{font-family:var(--mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--dk-muted);line-height:1.5}
+.esco-hero .cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.esco-hero .btn.blue:hover{background:var(--blue-1);border-color:var(--blue-1)}
+/* 4-step flow */
+.esco-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:0 0 44px}
+.esco-step{background:#fff;padding:26px 24px}
+.esco-step h4{font-size:1.02rem;font-weight:800;letter-spacing:-.01em}
+.esco-step p{font-size:.88rem;color:var(--muted);margin-top:8px;line-height:1.6}
+/* tables */
+.esco-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.esco-table{width:100%;border-collapse:collapse;font-size:.94rem;min-width:520px}
+.esco-table th,.esco-table td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.esco-table thead th{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--ink);white-space:nowrap}
+.esco-table tbody th{font-weight:700;color:var(--ink)}
+.esco-table td{color:var(--ink-2)}
+.esco-table .hi{background:var(--blue-wash);color:var(--blue-ink);font-weight:600}
+.esco-table thead th.hi{background:var(--blue-wash);color:var(--blue);border-bottom-color:var(--blue)}
+/* led features */
+.esco-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.esco-feat{background:#fff;border:1px solid var(--line);padding:28px 26px}
+.esco-feat h4{font-size:1.08rem;font-weight:800;letter-spacing:-.01em}
+.esco-feat p{font-size:.92rem;color:var(--ink-2);margin-top:10px;line-height:1.7}
+/* targets */
+.esco-targets{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.esco-target{border:1px solid var(--line);background:#fff;transition:border-color .2s}
+.esco-target[open]{border-color:var(--blue)}
+.esco-target summary{list-style:none;cursor:pointer;padding:22px 44px 22px 24px;display:flex;flex-direction:column;gap:9px;position:relative}
+.esco-target summary::-webkit-details-marker{display:none}
+.esco-target summary::after{content:"+";position:absolute;right:20px;top:19px;font-family:var(--mono);color:var(--blue);font-size:1.15rem;line-height:1}
+.esco-target[open] summary::after{content:"\2212"}
+.esco-target .et-name{font-size:1.08rem;font-weight:800;letter-spacing:-.01em}
+.esco-target .et-rate{font-family:var(--mono);font-size:.9rem;color:var(--blue);font-weight:700}
+.esco-target .et-rate em{font-style:normal;color:var(--muted);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;display:block;font-weight:400;margin-bottom:2px}
+.esco-target .et-body{padding:0 24px 24px;display:flex;flex-direction:column;gap:14px}
+.esco-target .et-body>p{font-size:.9rem;color:var(--ink-2);line-height:1.7}
+.esco-target .et-meta{font-family:var(--mono);font-size:.82rem;color:var(--ink)}
+.esco-target .et-meta em{font-style:normal;color:var(--muted);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;margin-right:8px}
+.esco-slownote{font-size:.82rem;color:var(--muted);border-left:2px solid var(--blue);padding-left:12px;line-height:1.6}
+.esco-target .go{font-family:var(--mono);font-size:.8rem;color:var(--blue);display:inline-flex;gap:6px;align-items:center;margin-top:2px}
+/* calculator (dark blue section) */
+[data-bg="blue"]{background:var(--ink);color:#fff;border-top:1px solid var(--line)}
+[data-bg="blue"] .sectlabel h2{color:#fff}
+.esco-calc{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;margin-top:8px}
+.esco-calc-in{background:#fff;border:1px solid var(--line);padding:28px}
+.esco-calc-in .field:last-of-type{margin-bottom:18px}
+.esco-calc-in .btn{width:100%;justify-content:center}
+.esco-calc-out{background:var(--blue-wash);border:1px solid var(--blue-wash);padding:28px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.esco-calc-result{display:flex;flex-direction:column;gap:8px}
+.esco-calc-result .pre{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.esco-calc-result strong{font-family:var(--display);font-size:1.5rem;font-weight:800;color:var(--blue-ink);line-height:1.3}
+.esco-calc-out .btn.ghost{color:var(--blue);border-color:var(--blue)}
+.esco-calc-out .btn.ghost:hover{background:var(--blue);color:#fff}
+.esco-disclaimer{font-size:.8rem;color:var(--muted);line-height:1.6;margin:0}
+/* structure */
+.esco-roles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.esco-role{background:#fff;border:1px solid var(--line);padding:30px 28px}
+.esco-role h4{font-size:1.08rem;font-weight:800;letter-spacing:-.01em}
+.esco-role p{font-size:.92rem;color:var(--ink-2);margin-top:12px;line-height:1.7}
+.esco-how{margin-top:24px;background:var(--ink);color:#fff;padding:32px 30px}
+.esco-how h4{font-size:1.15rem;font-weight:800;color:#fff}
+.esco-how p{font-size:.95rem;color:var(--dk-muted);margin-top:12px;line-height:1.7}
+.esco-steps-wrap{margin-top:38px}
+.esco-steps-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
+.esco-steps{list-style:none;counter-reset:step;display:flex;flex-wrap:wrap;gap:10px}
+.esco-steps li{counter-increment:step;background:#fff;border:1px solid var(--line);padding:14px 16px 14px 44px;position:relative;font-size:.9rem;color:var(--ink-2);flex:1;min-width:210px}
+.esco-steps li::before{content:counter(step);position:absolute;left:14px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:.78rem;color:#fff;background:var(--blue);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+/* faq */
+.esco-faqs{border-top:2px solid var(--ink)}
+.esco-faq{border-bottom:1px solid var(--line)}
+.esco-faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;font-size:1.05rem;font-weight:700;color:var(--ink)}
+.esco-faq summary::-webkit-details-marker{display:none}
+.esco-faq summary::after{content:"+";position:absolute;right:6px;top:20px;font-family:var(--mono);color:var(--blue);font-size:1.15rem;line-height:1}
+.esco-faq[open] summary::after{content:"\2212"}
+.esco-faq-a{padding:0 0 24px}
+.esco-faq-a p{font-size:.95rem;color:var(--ink-2);line-height:1.75;max-width:72ch}
+/* apply form */
+.esco-form{max-width:880px}
+.esco-form .consent{margin-top:4px}
+/* business div4 cta */
+.biz-d4-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+/* quote esco note */
+.qesco-note{margin-top:16px;background:var(--blue-wash);border:1px solid var(--line);padding:18px 20px}
+.qesco-note p{font-size:.92rem;color:var(--ink-2);line-height:1.7;margin:0 0 10px}
+.qesco-note .go{font-family:var(--mono);font-size:.82rem;color:var(--blue);display:inline-flex;gap:8px;align-items:center}
+/* esco responsive */
+@media(max-width:1024px){
+  .ovgrid.four{grid-template-columns:repeat(2,1fr)}
+  .esco-targets{grid-template-columns:repeat(2,1fr)}
+  .esco-flow{grid-template-columns:repeat(2,1fr)}
+  .esco-feats{grid-template-columns:1fr}
+  .esco-roles{grid-template-columns:1fr}
+  .esco-calc{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .esco-hero .wrap{padding:56px 20px 60px}
+  .ovgrid.four,.esco-targets,.esco-flow{grid-template-columns:1fr}
+  .esco-kpi{min-width:120px}
+}
+@media(prefers-reduced-motion:reduce){
+  .esco-target{transition:none}
 }
